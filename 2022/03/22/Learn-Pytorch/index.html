@@ -20,17 +20,20 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="schedule">
-<meta property="og:url" content="http://example.com/schedule/index.html">
+  <meta name="description" content="Pytorch入门Tensor（张量） Tensors 类似于 NumPy 的 ndarrays ，同时 Tensors 可以使用 GPU 进行计算。 任何使张量会发生变化的操作都有一个前缀 ‘_’，如x.add_(y) 改变一个 tensor 的大小或者形状，你可以使用 torch.view 一个元素 tensor ，使用 .item() 来获得这个 value  Pytorch自动微分Tens">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Learn Pytorch">
+<meta property="og:url" content="http://example.com/2022/03/22/Learn-Pytorch/index.html">
 <meta property="og:site_name" content="Ted Xu&#39;s Blog">
+<meta property="og:description" content="Pytorch入门Tensor（张量） Tensors 类似于 NumPy 的 ndarrays ，同时 Tensors 可以使用 GPU 进行计算。 任何使张量会发生变化的操作都有一个前缀 ‘_’，如x.add_(y) 改变一个 tensor 的大小或者形状，你可以使用 torch.view 一个元素 tensor ，使用 .item() 来获得这个 value  Pytorch自动微分Tens">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-03-13T11:18:46.000Z">
-<meta property="article:modified_time" content="2022-03-13T11:18:59.269Z">
+<meta property="article:published_time" content="2022-03-22T08:53:37.000Z">
+<meta property="article:modified_time" content="2022-03-22T12:52:49.256Z">
 <meta property="article:author" content="Ted Xu">
+<meta property="article:tag" content="Skills">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/schedule/">
+<link rel="canonical" href="http://example.com/2022/03/22/Learn-Pytorch/">
 
 
 <script id="page-configurations">
@@ -38,13 +41,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>schedule | Ted Xu's Blog
-</title>
+  <title>Learn Pytorch | Ted Xu's Blog</title>
   
 
 
@@ -158,200 +160,123 @@
       <div class="main-inner">
         <div class="content-wrap">
           
-  
-  
 
-          <div class="content page posts-expand">
+          <div class="content post posts-expand">
             
 
     
-    
-    
-    <div class="post-block" lang="zh-CN">
-      <header class="post-header">
-
-<h1 class="post-title" itemprop="name headline">schedule
-</h1>
-
-<div class="post-meta">
   
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/22/Learn-Pytorch/">
 
-</div>
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Ted Xu">
+      <meta itemprop="description" content="">
+    </span>
 
-</header>
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ted Xu's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Learn Pytorch
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-03-22 16:53:37 / 修改时间：20:52:49" itemprop="dateCreated datePublished" datetime="2022-03-22T16:53:37+08:00">2022-03-22</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Skills-Pytorch/" itemprop="url" rel="index"><span itemprop="name">Skills - Pytorch</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-      
-      
-      <div class="post-body">
-          <div class="event-list">
+        <h2 id="Pytorch入门"><a href="#Pytorch入门" class="headerlink" title="Pytorch入门"></a>Pytorch入门</h2><h4 id="Tensor（张量）"><a href="#Tensor（张量）" class="headerlink" title="Tensor（张量）"></a>Tensor（张量）</h4><ul>
+<li>Tensors 类似于 NumPy 的 ndarrays ，同时 Tensors 可以使用 GPU 进行计算。</li>
+<li>任何使张量会发生变化的操作都有一个前缀 ‘_’，如<code>x.add_(y)</code></li>
+<li>改变一个 tensor 的大小或者形状，你可以使用 <code>torch.view</code></li>
+<li>一个元素 tensor ，使用 <code>.item()</code> 来获得这个 value</li>
+</ul>
+<h3 id="Pytorch自动微分"><a href="#Pytorch自动微分" class="headerlink" title="Pytorch自动微分"></a>Pytorch自动微分</h3><h4 id="Tensor"><a href="#Tensor" class="headerlink" title="Tensor"></a>Tensor</h4><ul>
+<li>torch.Tensor 是包的核心类。如果将其属性 .requires_grad 设置为 True，则会开始跟踪针对 tensor 的所有操作。完成计算后，您可以调用 .backward() 来自动计算所有梯度。该张量的梯度将累积到 .grad 属性中。</li>
+<li>要停止 tensor 历史记录的跟踪，您可以调用 .detach()，它将其与计算历史记录分离，并防止将来的计算被跟踪。</li>
+<li>要停止跟踪历史记录（和使用内存），您还可以将代码块使用 with torch.no_grad(): 包装起来。在评估模型时，这是特别有用，因为模型在训练阶段具有 requires_grad &#x3D; True 的可训练参数有利于调参，但在评估阶段我们不需要梯度。</li>
+<li>还有一个类对于 autograd 实现非常重要那就是 Function。Tensor 和 Function 互相连接并构建一个非循环图，它保存整个完整的计算过程的历史信息。每个张量都有一个 .grad_fn 属性保存着创建了张量的 Function 的引用，（如果用户自己创建张量，则 grad_fn 是 None ）。</li>
+<li>如果你想计算导数，你可以调用 Tensor.backward()。如果 Tensor 是标量（即它包含一个元素数据），则不需要指定任何参数backward()，但是如果它有更多元素，则需要指定一个gradient 参数来指定张量的形状。</li>
+</ul>
+<h3 id="Pytorch神经网络"><a href="#Pytorch神经网络" class="headerlink" title="Pytorch神经网络"></a>Pytorch神经网络</h3><p>现在对于自动梯度(autograd)有一些了解，神经网络是基于自动梯度 (autograd)来定义一些模型。一个 nn.Module 包括层和一个方法 forward(input) 它会返回输出(output)。</p>
+<p>一个典型的神经网络训练过程包括以下几点：</p>
+<ol>
+<li>定义一个包含可训练参数的神经网络</li>
+<li>迭代整个输入</li>
+<li>通过神经网络处理输入</li>
+<li>计算损失(loss)</li>
+<li>反向传播梯度到神经网络的参数</li>
+<li>更新网络的参数，典型的用一个简单的更新方法：weight &#x3D; weight - learning_rate *gradient</li>
+</ol>
+<h3 id="PyTorch图像分类器"><a href="#PyTorch图像分类器" class="headerlink" title="PyTorch图像分类器"></a>PyTorch图像分类器</h3><p>通常来说，当你处理图像，文本，语音或者视频数据时，你可以使用标准 python 包将数据加载成 numpy 数组格式，然后将这个数组转换成 torch.Tensor</p>
+<ul>
+<li>对于图像，可以用 Pillow，OpenCV</li>
+<li>对于语音，可以用 scipy，librosa</li>
+<li>对于文本，可以直接用 Python 或 Cython 基础数据加载模块，或者用 NLTK 和 SpaCy</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Skills/" rel="tag"># Skills</a>
           </div>
-          <script>
-(function() {
-  // Initialization
-  var calendar = {
-    orderBy     : 'startTime',
-    showLocation: false,
-    offsetMax   : 72,
-    offsetMin   : 4,
-    showDeleted : false,
-    singleEvents: true,
-    maxResults  : 250
-  };
-
-  // Read config form theme config file
-  Object.assign(calendar, {"calendar_id":"<required>","api_key":"<required>","orderBy":"startTime","offsetMax":24,"offsetMin":4,"showDeleted":false,"singleEvents":true,"maxResults":250});
-
-  var now = new Date();
-  var timeMax = new Date();
-  var timeMin = new Date();
-
-  timeMax.setHours(now.getHours() + calendar.offsetMax);
-  timeMin.setHours(now.getHours() - calendar.offsetMin);
-
-  // Build URL
-  const params = {
-    key         : calendar.api_key,
-    orderBy     : calendar.orderBy,
-    timeMax     : timeMax.toISOString(),
-    timeMin     : timeMin.toISOString(),
-    showDeleted : calendar.showDeleted,
-    singleEvents: calendar.singleEvents,
-    maxResults  : calendar.maxResults
-  };
-
-  var request_url = 'https://www.googleapis.com/calendar/v3/calendars/' + calendar.calendar_id + '/events?' + Object.entries(params).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
-
-  fetchData();
-  var fetchDataTimer = setInterval(fetchData, 60000);
-  window.addEventListener('pjax:send', () => {
-    clearInterval(fetchDataTimer);
-  });
-
-  function fetchData() {
-    var eventList = document.querySelector('.event-list');
-    if (!eventList) return;
-
-    fetch(request_url).then(response => {
-      return response.json();
-    }).then(data => {
-      if (data.items.length === 0) {
-        eventList.innerHTML = '<hr>';
-        return;
-      }
-      // Clean the event list
-      eventList.innerHTML = '';
-      var prevEnd = 0; // used to decide where to insert an <hr>
-
-      data.items.forEach(event => {
-        // Parse data
-        var utc   = new Date().getTimezoneOffset() * 60000;
-        var start = event.start.dateTime = new Date(event.start.dateTime || (new Date(event.start.date).getTime() + utc));
-        var end   = event.end.dateTime = new Date(event.end.dateTime || (new Date(event.end.date).getTime() + utc));
-
-        tense = judgeTense(now, start, end); // 0:now 1:future -1:past
-
-        if (tense === 1 && prevEnd < now) {
-          eventList.innerHTML += '<hr>';
-        }
-
-        eventDOM = buildEventDOM(tense, event);
-        eventList.innerHTML += eventDOM;
-
-        prevEnd = end;
-      });
-    });
-  }
-
-  function getRelativeTime(current, previous) {
-    var msPerMinute = 60 * 1000;
-    var msPerHour = msPerMinute * 60;
-    var msPerDay = msPerHour * 24;
-    var msPerMonth = msPerDay * 30;
-    var msPerYear = msPerDay * 365;
-
-    var elapsed = current - previous;
-    var tense = elapsed > 0 ? 'ago' : 'later';
-
-    elapsed = Math.abs(elapsed);
-
-    if      ( elapsed < msPerHour  ) {
-      return Math.round(elapsed / msPerMinute) + ' minutes ' + tense;
-    }
-    else if ( elapsed < msPerDay   ) {
-      return Math.round(elapsed / msPerHour) + ' hours ' + tense;
-    }
-    else if ( elapsed < msPerMonth ) {
-      return 'about ' + Math.round(elapsed / msPerDay) + ' days ' + tense;
-    }
-    else if ( elapsed < msPerYear  ) {
-      return 'about ' + Math.round(elapsed / msPerMonth) + ' months ' + tense;
-    }
-    else {
-      return 'about' + Math.round(elapsed / msPerYear) + ' years' + tense;
-    }
-  }
-
-  function judgeTense(now, eventStart, eventEnd) {
-    if      (eventEnd   < now) { return -1; }
-    else if (eventStart > now) { return  1; }
-    else                       { return  0; }
-  }
-
-  function buildEventDOM(tense, event) {
-    var tenseClass = '';
-    var start      = event.start.dateTime;
-    var end        = event.end.dateTime;
-    switch(tense) {
-      case 0 : // now
-        tenseClass = 'event-now';
-        break;
-      case 1 : // future
-        tenseClass = 'event-future';
-        break;
-      case -1: // past
-        tenseClass = 'event-past';
-        break;
-      default:
-        throw 'Time data error';
-    }
-    var durationFormat = {
-      weekday: 'short',
-      hour   : '2-digit',
-      minute : '2-digit'
-    };
-    var relativeTimeStr = (tense === 0) ? 'NOW' : getRelativeTime(now, start);
-    var durationStr = start.toLocaleTimeString([], durationFormat) + ' - ' + end.toLocaleTimeString([], durationFormat);
-
-    var locationDOM = '';
-    if (calendar.showLocation && event.location) {
-      locationDOM = '<span class="event-location event-details">' + event.location + '</span>';
-    }
-
-    var eventContent = `<div class="event ${tenseClass}">
-        <h2 class="event-summary">
-          ${event.summary}
-          <span class="event-relative-time">${relativeTimeStr}</span>
-        </h2>
-        ${locationDOM}
-        <span class="event-duration event-details">${durationStr}</span>
-      </div>`;
-    return eventContent;
-  }
-})();
-</script>
 
         
-      </div>
-      
-      
-      
-    </div>
-    
 
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/03/17/Learn-Git/" rel="prev" title="Learn Git">
+      <i class="fa fa-chevron-left"></i> Learn Git
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2022/03/30/How-Powerful-are-Graph-Neural-Networks/" rel="next" title="How Powerful are Graph Neural Networks?">
+      How Powerful are Graph Neural Networks? <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
     
-    
-    
+  </article>
+  
+  
+  
+
 
 
           </div>
@@ -402,6 +327,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Pytorch%E5%85%A5%E9%97%A8"><span class="nav-number">1.</span> <span class="nav-text">Pytorch入门</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Tensor%EF%BC%88%E5%BC%A0%E9%87%8F%EF%BC%89"><span class="nav-number">1.0.1.</span> <span class="nav-text">Tensor（张量）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Pytorch%E8%87%AA%E5%8A%A8%E5%BE%AE%E5%88%86"><span class="nav-number">1.1.</span> <span class="nav-text">Pytorch自动微分</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Tensor"><span class="nav-number">1.1.1.</span> <span class="nav-text">Tensor</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Pytorch%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C"><span class="nav-number">1.2.</span> <span class="nav-text">Pytorch神经网络</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PyTorch%E5%9B%BE%E5%83%8F%E5%88%86%E7%B1%BB%E5%99%A8"><span class="nav-number">1.3.</span> <span class="nav-text">PyTorch图像分类器</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
