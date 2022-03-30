@@ -185,10 +185,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2022-03-30 02:13:00 / 修改时间：22:31:48" itemprop="dateCreated datePublished" datetime="2022-03-30T02:13:00+08:00">2022-03-30</time>
+              <time title="创建时间：2022-03-30 02:13:00" itemprop="dateCreated datePublished" datetime="2022-03-30T02:13:00+08:00">2022-03-30</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-03-31 02:07:13" itemprop="dateModified" datetime="2022-03-31T02:07:13+08:00">2022-03-31</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -210,7 +216,13 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>图形神经网络（GNNs）是一个有效的、用于图表示学习的有效框架。GNNs遵循邻域聚合方案，其中节点的表示向量是通过递归聚合和转换其相邻节点的表示向量计算得来的。许多GNN的变体已经被提出，并在节点和图的分类任务上取得了最先进的成果。然而，尽管GNNs彻底改变了图的表示学习，但人们对它们的表征特性和限制只有有限的了解。在这里，我们提出了一个理论框架，用于分析GNNs在捕捉不同图结构方面的表现力。我们的结果描述了流行GNN变体的鉴别能力，例如图卷积网络和GraphSAGE，并表明它们不能学会区分某些简单的图结构。然后，我们搭建了一个简单的架构，该架构被证明是是GNN模型中最具表现力的，并且与Weisfeiler-Lehman图的同构性测试一样强大。 我们从经验上在一些图分类基准上验证了我们的理论发现，并证明我们的模型实现了最先进的性能。</p>
+          <h2 id="Personal-Summary"><a href="#Personal-Summary" class="headerlink" title="Personal Summary"></a>Personal Summary</h2><p>这篇文章提出了一个理论框架，用于分析GNNs在刻画图结构时的表达能力，我认为可以分为如下四部分。</p>
+<p>文章第一部分是理论证明。首先，通过证明凡是经过GNN映射为不同embedding的两张图，都能够被WL图异构测试分辨，说明了GNN在辨别图任务上至多与WL测试的能力相当；接着提出并论证了GNN达到与WL测试相当的能力的条件，即AGGREGATE、COMBINE、及READOUT函数均满足单射，这也为搭建GIN模型奠定了基础；随后作者证明了当输入特征的空间可数时，经过有穷次变换的节点特征向量的空间同样是可数的，也为之后的论证提供了便利。</p>
+<p>文章第二部分搭建了图异构网络GIN，即满足先前所述与WL测试能力相当条件的GNN模型。其先后证明了基于sum-pooling的AGGREGATE、COMBINE方法能够实现单射函数，并利用多层感知机的万能近似定理给出了建模后的节点更新表示；最后如果需要进行图分类任务，READOUT函数也可以采取AGGREGATE函数类似的sum-pooling思想，值得注意的是这里作者为了结合浅层次具有泛化能力和深层次具有表达能力的embedding，认为可以将他们连接后作为模型输出的全图embedding。</p>
+<p>文章第三部分说明了其他GNN模型的不足。首先，如果用单层感知器模型代替多层感知机，则由于其的线性特性，在不带偏置的前提下，存在不同输入得到相同输出的情况，即不满足单射条件，因此表示能力较弱；若使用Mean Max-Pooling方法，则由于Mean Pooling只捕捉节点特征分布信息，Max Pooling将多重集退化为集合，均存在不能够捕捉图结构信息的情况；接着作者分别针对Mean Max-Pooling方法展开了更细致讨论，即当图的统计和分布信息比实际结构更加重要时，Mean-Pooling的效果较好；当需要识别代表性、主干元素时，Max-Pooling则较为适合。</p>
+<p>文章第四部分为实验验证。作者通过对比GIN与GNN、Baseline模型在训练集上的图结构表达能力、以及在测试集上的泛化能力，验证了GIN性能的最优性。一个有趣的现象是当作者将ε参数固定为0时，GIN模型的效果较好，这有可能是模型简单的缘故。</p>
+<p>这篇文章以论证为主，辅以模型搭建、对比与实验，且中间不存在论证缺环，看过一遍后让人觉得酣畅淋漓。</p>
+<h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>图形神经网络（GNNs）是一个有效的、用于图表示学习的有效框架。GNNs遵循邻域聚合方案，其中节点的表示向量是通过递归聚合和转换其相邻节点的表示向量计算得来的。许多GNN的变体已经被提出，并在节点和图的分类任务上取得了最先进的成果。然而，尽管GNNs彻底改变了图的表示学习，但人们对它们的表征特性和限制只有有限的了解。在这里，我们提出了一个理论框架，用于分析GNNs在捕捉不同图结构方面的表现力。我们的结果描述了流行GNN变体的鉴别能力，例如图卷积网络和GraphSAGE，并表明它们不能学会区分某些简单的图结构。然后，我们搭建了一个简单的架构，该架构被证明是是GNN模型中最具表现力的，并且与Weisfeiler-Lehman图的同构性测试一样强大。 我们从经验上在一些图分类基准上验证了我们的理论发现，并证明我们的模型实现了最先进的性能。</p>
 <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><ul>
 <li>GNN聚合操作——k次迭代聚合<strong>k阶近邻</strong>的信息</li>
 <li>GNN变体——不同的聚合和Pooling方法<ul>
@@ -422,7 +434,7 @@
 </li>
 <li>基线：<strong>WL子树核</strong>；state-of-the-art深度学习框架；匿名随机游走嵌入</li>
 </ul>
-<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><ul>
+<h3 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h3><ul>
 <li>训练集表现<ul>
 <li><strong>表达能力越强，训练集准确率越高</strong></li>
 <li>理论最强GNN（GIN）介乎完美的拟合了所有的训练集；其他GNN在许多数据集上严重<strong>欠拟合</strong>；<strong>MLP&gt;1-layer perceptrons</strong>, <strong>sum&gt;mean&#x2F;max</strong></li>
