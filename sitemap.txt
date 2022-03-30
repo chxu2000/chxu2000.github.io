@@ -10,10 +10,10 @@ http://example.com/categories/index.html
 http://example.com/tags/index.html
 http://example.com/2022/03/13/hello-world/
 http://example.com/
-http://example.com/tags/Graph-Neural-Networks/
 http://example.com/tags/Skills/
 http://example.com/tags/Financial-System-Risk/
-http://example.com/categories/Lab-Graph/
+http://example.com/tags/Graph-Neural-Networks/
 http://example.com/categories/Skills-Git/
 http://example.com/categories/Skills-Pytorch/
 http://example.com/categories/Lab-FSR/
+http://example.com/categories/Lab-Graph/
