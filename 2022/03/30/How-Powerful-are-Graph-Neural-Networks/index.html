@@ -20,18 +20,18 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Personal Summary这篇文章提出了一个理论框架，用于分析GNNs在刻画图结构时的表达能力，我认为可以分为如下四部分。 文章第一部分是理论证明。首先，通过证明凡是经过GNN映射为不同embedding的两张图，都能够被WL图异构测试分辨，说明了GNN在辨别图任务上至多与WL测试的能力相当；接着提出并论证了GNN达到与WL测试相当的能力的条件，即AGGREGATE、COMBINE、及REA">
+  <meta name="description" content="Personal Review这篇文章提出了一个理论框架，用于分析GNNs在捕捉图结构时的表达能力，我认为可以分为如下四部分。 文章第一部分是理论证明。首先，通过证明凡是经过GNN映射为不同embedding的两张图，都能够被WL图异构测试分辨，说明了GNN在辨别图任务上至多与WL测试的能力相当；接着提出并论证了GNN达到与WL测试相当的能力的条件，即AGGREGATE、COMBINE、及READ">
 <meta property="og:type" content="article">
 <meta property="og:title" content="How Powerful are Graph Neural Networks?">
 <meta property="og:url" content="http://example.com/2022/03/30/How-Powerful-are-Graph-Neural-Networks/index.html">
 <meta property="og:site_name" content="Ted Xu&#39;s Blog">
-<meta property="og:description" content="Personal Summary这篇文章提出了一个理论框架，用于分析GNNs在刻画图结构时的表达能力，我认为可以分为如下四部分。 文章第一部分是理论证明。首先，通过证明凡是经过GNN映射为不同embedding的两张图，都能够被WL图异构测试分辨，说明了GNN在辨别图任务上至多与WL测试的能力相当；接着提出并论证了GNN达到与WL测试相当的能力的条件，即AGGREGATE、COMBINE、及REA">
+<meta property="og:description" content="Personal Review这篇文章提出了一个理论框架，用于分析GNNs在捕捉图结构时的表达能力，我认为可以分为如下四部分。 文章第一部分是理论证明。首先，通过证明凡是经过GNN映射为不同embedding的两张图，都能够被WL图异构测试分辨，说明了GNN在辨别图任务上至多与WL测试的能力相当；接着提出并论证了GNN达到与WL测试相当的能力的条件，即AGGREGATE、COMBINE、及READ">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://test-bucket-12138.oss-cn-shanghai.aliyuncs.com/img/image-20220330155220548.png">
 <meta property="og:image" content="http://test-bucket-12138.oss-cn-shanghai.aliyuncs.com/img/image-20220330155247401.png">
 <meta property="og:image" content="http://test-bucket-12138.oss-cn-shanghai.aliyuncs.com/img/image-20220330201022397.png">
 <meta property="article:published_time" content="2022-03-29T18:13:00.000Z">
-<meta property="article:modified_time" content="2022-03-30T18:09:13.965Z">
+<meta property="article:modified_time" content="2022-03-31T07:40:54.971Z">
 <meta property="article:author" content="Ted Xu">
 <meta property="article:tag" content="Graph Neural Networks">
 <meta name="twitter:card" content="summary">
@@ -202,7 +202,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-03-31 02:09:13" itemprop="dateModified" datetime="2022-03-31T02:09:13+08:00">2022-03-31</time>
+                <time title="修改时间：2022-03-31 15:40:54" itemprop="dateModified" datetime="2022-03-31T15:40:54+08:00">2022-03-31</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -225,20 +225,20 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="Personal-Summary"><a href="#Personal-Summary" class="headerlink" title="Personal Summary"></a>Personal Summary</h2><p>这篇文章提出了一个理论框架，用于分析GNNs在刻画图结构时的表达能力，我认为可以分为如下四部分。</p>
-<p>文章第一部分是理论证明。首先，通过证明凡是经过GNN映射为不同embedding的两张图，都能够被WL图异构测试分辨，说明了GNN在辨别图任务上至多与WL测试的能力相当；接着提出并论证了GNN达到与WL测试相当的能力的条件，即AGGREGATE、COMBINE、及READOUT函数均满足单射，这也为搭建GIN模型奠定了基础；随后作者证明了当输入特征的空间可数时，经过有穷次变换的节点特征向量的空间同样是可数的，也为之后的论证提供了便利。</p>
-<p>文章第二部分搭建了图异构网络GIN，即满足先前所述与WL测试能力相当条件的GNN模型。其先后证明了基于sum-pooling的AGGREGATE、COMBINE方法能够实现单射函数，并利用多层感知机的万能近似定理给出了建模后的节点更新表示；最后如果需要进行图分类任务，READOUT函数也可以采取AGGREGATE函数类似的sum-pooling思想，值得注意的是这里作者为了结合浅层次具有泛化能力和深层次具有表达能力的embedding，认为可以将他们连接后作为模型输出的全图embedding。</p>
-<p>文章第三部分说明了其他GNN模型的不足。首先，如果用单层感知器模型代替多层感知机，则由于其的线性特性，在不带偏置的前提下，存在不同输入得到相同输出的情况，即不满足单射条件，因此表示能力较弱；若使用Mean Max-Pooling方法，则由于Mean Pooling只捕捉节点特征分布信息，Max Pooling将多重集退化为集合，均存在不能够捕捉图结构信息的情况；接着作者分别针对Mean Max-Pooling方法展开了更细致讨论，即当图的统计和分布信息比实际结构更加重要时，Mean-Pooling的效果较好；当需要识别代表性、主干元素时，Max-Pooling则较为适合。</p>
+        <h2 id="Personal-Review"><a href="#Personal-Review" class="headerlink" title="Personal Review"></a>Personal Review</h2><p>这篇文章提出了一个<strong>理论框架</strong>，用于分析GNNs在捕捉图结构时的表达能力，我认为可以分为如下四部分。</p>
+<p>文章第一部分是<strong>理论证明</strong>。首先，通过证明凡是经过GNN映射为不同embedding的两张图，都能够被WL图异构测试分辨，说明了<strong>GNN在辨别图任务上至多与WL测试的能力相当</strong>；接着提出并论证了<strong>GNN达到与WL测试相当的能力的条件</strong>，即AGGREGATE、COMBINE、及READOUT函数均满足单射，这也为搭建GIN模型奠定了基础；随后作者证明了当输入特征的空间可数时，经过有穷次变换的节点特征向量的空间同样是<strong>可数</strong>的，也为之后的论证提供了便利。</p>
+<p>文章第二部分<strong>搭建了图异构网络GIN</strong>，即<strong>满足</strong>先前所述与WL测试能力相当<strong>条件</strong>的GNN模型。其先后证明了<strong>基于sum-pooling的AGGREGATE、COMBINE方法</strong>能够实现<strong>单射函数</strong>，并利用多层感知机的万能近似定理给出了建模后的节点更新参数化表示；最后如果需要进行图分类任务，READOUT函数也可以采取AGGREGATE函数类似的<strong>sum-pooling思想</strong>，值得注意的是这里作者为了结合浅层次具有泛化能力和深层次具有表达能力的embedding，认为可以将他们拼接后作为输出的全图embedding。</p>
+<p>文章第三部分说明了其他GNN模型的不足。首先，如果用<strong>单层感知器</strong>模型代替多层感知机，则由于其线性特性，在不带偏置的前提下，存在不同输入得到相同输出的情况，即不满足单射条件，因此表达能力较弱；若使用Mean Max-Pooling方法，则由于Mean Pooling只捕捉节点<strong>特征分布</strong>信息，Max Pooling将多重集<strong>退化为集合</strong>，均存在不能够捕捉图结构信息的情况；接着作者分别针对Mean Max-Pooling方法展开了更细致讨论，即当<strong>图的统计和分布信息</strong>比实际结构更加重要时，Mean-Pooling的效果较好；当需要识别<strong>代表性、主干元素</strong>时，Max-Pooling则较为适合。</p>
 <p>文章第四部分为实验验证。作者通过对比GIN与GNN、Baseline模型在训练集上的图结构表达能力、以及在测试集上的泛化能力，验证了GIN性能的最优性。一个有趣的现象是当作者将ε参数固定为0时，GIN模型的效果较好，这有可能是模型简单的缘故。</p>
 <p>这篇文章以论证为主，辅以模型搭建、对比与实验，且中间不存在论证缺环，看过一遍后让人觉得酣畅淋漓。</p>
-<h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>图形神经网络（GNNs）是一个有效的、用于图表示学习的有效框架。GNNs遵循邻域聚合方案，其中节点的表示向量是通过递归聚合和转换其相邻节点的表示向量计算得来的。许多GNN的变体已经被提出，并在节点和图的分类任务上取得了最先进的成果。然而，尽管GNNs彻底改变了图的表示学习，但人们对它们的表征特性和限制只有有限的了解。在这里，我们提出了一个理论框架，用于分析GNNs在捕捉不同图结构方面的表现力。我们的结果描述了流行GNN变体的鉴别能力，例如图卷积网络和GraphSAGE，并表明它们不能学会区分某些简单的图结构。然后，我们搭建了一个简单的架构，该架构被证明是是GNN模型中最具表现力的，并且与Weisfeiler-Lehman图的同构性测试一样强大。 我们从经验上在一些图分类基准上验证了我们的理论发现，并证明我们的模型实现了最先进的性能。</p>
+<h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>图形神经网络（GNNs）是一个用于图表示学习的有效框架。GNNs遵循邻域聚合方案，其中节点的表示向量是通过递归聚合和转换其相邻节点的表示向量计算得来的。许多GNN的变体已经被提出，并在节点和图的分类任务上取得了最先进的成果。然而，尽管GNNs彻底改变了图的表示学习，但人们对它们的<strong>表征特性和限制</strong>只有有限的了解。在这里，我们提出了一个理论框架，用于分析GNNs在捕捉不同图结构方面的表现力。我们的结果描述了流行GNN变体的鉴别能力，例如GCN和GraphSAGE，并表明它们不能学会区分某些简单的图结构。然后，我们搭建了一个简单的架构，该架构被证明是是GNN模型中最具表现力的，并且与Weisfeiler-Lehman图的同构性测试一样强大。 我们从经验上在一些图分类基准上验证了我们的理论发现，并证明我们的模型实现了最先进的性能。</p>
 <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><ul>
 <li>GNN聚合操作——k次迭代聚合<strong>k阶近邻</strong>的信息</li>
 <li>GNN变体——不同的聚合和Pooling方法<ul>
-<li>由经验直觉、启发式、实验结果驱动设计</li>
+<li>由<strong>经验直觉</strong>、<strong>启发式</strong>、<strong>实验结果</strong>驱动设计</li>
 </ul>
 </li>
-<li>提出分析GNN表达能力的理论框架——如果GNN的聚合方案具有足够高的表达能力，能够建模<strong>单射函数</strong>，那么GNN就可以具有与WL测试同样的鉴别能力</li>
+<li>提出分析GNN表达能力的理论框架——如果GNN的聚合方案具有足够强的表达能力，能够建模<strong>单射函数</strong>，那么GNN就可以具有与WL测试同样的鉴别能力</li>
 <li>主要结论<ul>
 <li>证明GNN在分辨图结构任务中<strong>至多</strong>达到WL测试的能力</li>
 <li>建立邻域聚合和整图读取函数的<strong>条件</strong>，使得到的GNN与WL测试一样强大</li>
@@ -260,8 +260,8 @@
 </li>
 <li><p>WL test用于判断图的同构性，该算法（一维）重复以下两步：</p>
 <ol>
-<li><strong>聚合</strong>节点邻居的标签</li>
-<li>用哈希函数将聚合后的<strong>多重集映射</strong>到新的标签</li>
+<li><strong>聚合</strong>节点及其邻居的标签</li>
+<li>用哈希函数将聚合后的<strong>多重集</strong>映射到新的标签</li>
 </ol>
 <p>只要某一迭代出现两图标签分布不同，则不同构。</p>
 <ul>
@@ -282,8 +282,8 @@
 </ul>
 <blockquote>
 <p>证明思路（反证+归纳法）：</p>
-<p>不妨假设$A(G_1)\neq A(G_2)$但WL测试无法判别二者异构。假设经过了0到k轮迭代，则所有轮次中$G_1$和$G_2$均有同样的WL测试节点标签。<strong>下面用归纳法证在同样的图$G&#x3D;G_1\space or\space G_2$上，$l_v^{(i)}&#x3D;l_u^{(i)}$则$h_v^{(i)}&#x3D;h_u^{(i)}$。</strong></p>
-<p>由于i&#x3D;0的初始状态时，有对任意节点u、v，$l_v^{(i)}&#x3D;l_u^{(i)}$则$h_v^{(i)}&#x3D;h_u^{(i)}$（二者起始的节点特征相同）。不妨假设前j轮满足条件，若$l_v^{(j+1)}&#x3D;l_u^{(j+1)}$，则必然有<br>$$<br>(l_v^{(j)},\space {l_w^{(j)}:w\in N(v)})&#x3D;(l_u^{(j)},\space {l_w^{(j)}:w\in N(u)})<br>$$<br>根据假设有<br>$$<br>(h_v^{(j)},\space {h_w^{(j)}:w\in N(v)})&#x3D;(h_u^{(j)},\space {h_w^{(j)}:w\in N(u)})<br>$$<br>则由于GNN采用同样的AGGREGATE和COMNBINE方法，输入相同则输出相同，即$h_v^{(i+1)}&#x3D;h_u^{(i+1)}$，“$l_v^{(i)}&#x3D;l_u^{(i)}$则$h_v^{(i)}&#x3D;h_u^{(i)}$”得证。</p>
+<p><strong>不妨假设$A(G_1)\neq A(G_2)$但WL测试无法判别二者异构。</strong>假设经过了0到k轮迭代，则所有轮次中$G_1$和$G_2$均有同样的WL测试节点标签。<strong>下面用归纳法证在同样的图$G&#x3D;G_1\space or\space G_2$上，$l_v^{(i)}&#x3D;l_u^{(i)}$则$h_v^{(i)}&#x3D;h_u^{(i)}$。</strong></p>
+<p>由于i&#x3D;0的初始状态时，有对任意节点u、v，$l_v^{(0)}&#x3D;l_u^{(0)}$则$h_v^{(0)}&#x3D;h_u^{(0)}$（二者起始的节点特征相同）。不妨假设前j轮满足条件，若$l_v^{(j+1)}&#x3D;l_u^{(j+1)}$，则必然有<br>$$<br>(l_v^{(j)},\space {l_w^{(j)}:w\in N(v)})&#x3D;(l_u^{(j)},\space {l_w^{(j)}:w\in N(u)})<br>$$<br>根据假设有<br>$$<br>(h_v^{(j)},\space {h_w^{(j)}:w\in N(v)})&#x3D;(h_u^{(j)},\space {h_w^{(j)}:w\in N(u)})<br>$$<br>则由于GNN采用同样的AGGREGATE和COMNBINE方法，输入相同则输出相同，即$h_v^{(i+1)}&#x3D;h_u^{(i+1)}$，“$l_v^{(i)}&#x3D;l_u^{(i)}$则$h_v^{(i)}&#x3D;h_u^{(i)}$”得证。</p>
 <p>由此，<strong>h由l决定</strong>，且整图读取函数相同，根据条件必然有$A(G_1)&#x3D;A(G_2)$，矛盾。</p>
 </blockquote>
 <ul>
@@ -303,7 +303,7 @@
 <p>令$G_1, G_2$为任意WL测试能够辨别的异构图。</p>
 <p>由于整图读取函数为单射，则在经过足够轮次的迭代后，A的邻域聚合过程将两张图映射为了不同多重集的节点特征。</p>
 <p>不妨假设A的节点表示更新函数如下，其中$f, \phi$为单射函数<br>$$<br>h_v^{(k)}&#x3D;\phi(h_v^{(k-1)},f({h_u^{(k-1)}: u\in N(v)}))<br>$$<br>而WL测试应用预定义的单射哈希函数$g$更新WL节点的标签<br>$$<br>l_v^{(k)}&#x3D;g(l_v^{(k-1)}, {l_u^{(k-1)}: u\in N(v)})<br>$$<br>以下通过<strong>归纳法</strong>证明，对于任意迭代次数k，**存在单射函数$\varphi$使得$h_v^{(k)}&#x3D;\varphi(l_v^{(k)})$**。特别的，当k&#x3D;0即初始状态时，因为初始特征相同，$\varphi$为恒等映射。</p>
-<p>不妨令k-1轮时满足假设，则用$\varphi(l_v^{(k-1)})$替换$h_v^{(k-1)}$得到<br>$$<br>h_v^{(k)}&#x3D;\phi(\varphi(l_v^{(k-1)}),f({\varphi(l_u^{(k-1)})}: u\in N(v)}))<br>$$<br>由单射函数的组合是单射的，可以找到单射函数$\psi$使得<br>$$<br>h_v^{(k)}&#x3D;\psi(l_v^{(k-1)},{l_u^{(k-1)}: u\in N(v)})<br>$$<br>于是我们得到<br>$$<br>h_v^{(k)}&#x3D;\psi g^{-1}g(l_v^{(k-1)},{l_u^{(k-1)}: u\in N(v)})&#x3D;\psi g^{-1}(l_v^{(k)})<br>$$<br><strong>$\varphi&#x3D;\psi g^{-1}$为单射函数</strong>，于是找到单射函数$\varphi$使得$h_v^{(k)}&#x3D;\varphi(l_v^{(k)})$。若在第k轮时，WL测试发现$G_1, G_2$异构，故二者多重集$l_v^{(k)}$不同。二图由图神经网络得到的节点嵌入${h_v^{(k)}}&#x3D;{\varphi(l_v^{(k)})}$必然不同。</p>
+<p>不妨令k前-1轮满足假设，则用$\varphi(l_v^{(k-1)})$替换$h_v^{(k-1)}$得到<br>$$<br>h_v^{(k)}&#x3D;\phi(\varphi(l_v^{(k-1)}),f({\varphi(l_u^{(k-1)})}: u\in N(v)}))<br>$$<br>由单射函数的组合是单射的，可以找到单射函数$\psi$使得<br>$$<br>h_v^{(k)}&#x3D;\psi(l_v^{(k-1)},{l_u^{(k-1)}: u\in N(v)})<br>$$<br>于是我们得到<br>$$<br>h_v^{(k)}&#x3D;\psi g^{-1}g(l_v^{(k-1)},{l_u^{(k-1)}: u\in N(v)})&#x3D;\psi g^{-1}(l_v^{(k)})<br>$$<br><strong>$\varphi&#x3D;\psi g^{-1}$为单射函数</strong>，于是找到单射函数$\varphi$使得$h_v^{(k)}&#x3D;\varphi(l_v^{(k)})$。若在第k轮时，WL测试发现$G_1, G_2$异构，故二者多重集$l_v^{(k)}$不同。二图由图神经网络得到的节点嵌入${h_v^{(k)}}&#x3D;{\varphi(l_v^{(k)})}$必然不同。</p>
 </blockquote>
 <ul>
 <li>对于可数集合，单射性较好的刻画了函数反映输入不同的能力（本文仅考虑节点特征可数的情况）。</li>
@@ -315,18 +315,18 @@
 <p>目标：证明可数集的有限大小多重集上任意函数$g$的值域也是可数的。</p>
 <p>由于g(X)为X上的<strong>单射函数</strong>，因此只需要证明<strong>所有多重集$X\subset \mathcal{X}$可数</strong>；</p>
 <p>两可数集的并可数，令$\mathcal{X’}&#x3D;\mathcal{X}\cup{e}$，其中e为占位元素，其不属于$\mathcal{X}$</p>
-<p>接下来，构建从$X\in \mathcal{X}$到$\mathcal{X’^k}$的单射函数$h$：由$\mathcal{X}$可数，存在一种映射$Z: \mathcal{X}\rightarrow \mathbb{N}$即从$x\in \mathcal{X}$到自然数。若$|X|&#x3D;n$，由多重集$X$的大小有限，则存在$k\in N$使得所有$X$的$n&lt;k$，我们可以将$h$定义为<br>$$<br>h(X)&#x3D;(x_1,x_2,…,x_n,e,e,e,…)<br>$$<br>其中由k到n的位置均被占位元素e填满，则显然$h$为<strong>单射</strong>，因为对任意有限大小的多重集$X$和$Y$，$h(X)&#x3D;h(Y)$当且仅当二者相等。故得证。</p>
+<p>接下来，构建从$X\subset \mathcal{X}$到$\mathcal{X’^k}$的单射函数$h$：由$\mathcal{X}$可数，存在一种映射$Z: \mathcal{X}\rightarrow \mathbb{N}$即从$x\in \mathcal{X}$到自然数。若$|X|&#x3D;n$，由多重集$X$的大小有限，则存在$k\in N$使得所有$X$的$n&lt;k$，我们可以将$h$定义为<br>$$<br>h(X)&#x3D;(x_1,x_2,…,x_n,e,e,e,…)<br>$$<br>其中由n到k的位置均被占位元素e填满，则显然$h$为<strong>单射</strong>，因为对任意有限大小的多重集$X$和$Y$，$h(X)&#x3D;h(Y)$当且仅当二者相等。故得证。</p>
 </blockquote>
 <ul>
-<li>值得注意的是，由于GNN实际上是将WL测试中的子树结构映射到<strong>更低维度</strong>的空间，因此不仅能够用于辨别不同的图，还能够捕捉图结构之间的<strong>相似性</strong>（应对稀疏、噪声），这是WL测试所不具有的。</li>
+<li>值得注意的是，由于GNN实际上是将WL测试中的子树结构映射到<strong>更低维度</strong>的空间，因此不仅能够用于辨别不同的图，还能够捕捉图结构之间的<strong>相似性</strong>（同时应对稀疏、噪声），这是WL测试所不具有的。</li>
 </ul>
 <h3 id="Graph-Isomorphism-Network-GIN"><a href="#Graph-Isomorphism-Network-GIN" class="headerlink" title="Graph Isomorphism Network (GIN)"></a>Graph Isomorphism Network (GIN)</h3><ul>
-<li>确定具有最强表达能力GNN的条件后，作者提出了一个简单的架构（图同构网络GIN），满足定理3的条件</li>
-<li>为了建模邻域聚合的单射多重集函数，作者用神经网络参数化多重集函数</li>
+<li>确定具有最强表达能力GNN的条件后，作者提出了一个简单的架构（<strong>图同构网络GIN</strong>），满足定理3的条件</li>
+<li>为了建模邻域聚合的单射多重集函数，作者用神经网络对通用多重集函数进行参数化</li>
 <li><strong>引理5</strong>：假设$\mathcal{X}$可数。存在一个函数$f: \mathcal{X}\rightarrow \mathbb{R}^n$使得$h(X)&#x3D;\sum_{x\in X}f(x)$对于每一个有限长度的多重集$X\subset \mathcal{X}$具有独一无二的值（<strong>单射</strong>）。更进一步，任何多重集函数都能够找到恰当的函数$\phi$，使其被分解为$g(X)&#x3D;\phi(\sum_{x\in X}f(x))$。</li>
 </ul>
 <blockquote>
-<p>证明思路（举例法）：</p>
+<p>证明思路（举例法、类似one-hot编码）：</p>
 <p>由于$\mathcal{X}$可数，存在映射$Z:\mathcal{X}\rightarrow \mathbb{N}$</p>
 <p>存在$N\in \mathbb{N}$使得对所有$X$有$|X|&lt;N$，可以令$f(x)&#x3D;N^{-Z(x)}$，则$h(X)&#x3D;\sum_{x\in X}f(x)$为多重集上的单射函数（N为基数）</p>
 <p>此时，由$h(X)&#x3D;\sum_{x\in X}f(x)$是单射的，因此$\phi$定义明确。</p>
@@ -340,7 +340,7 @@
 <p>不妨令$f(x)&#x3D;N^{-Z(x)}$，定义与引理5证明相同。</p>
 <p>目标：证明对任意$(c’,X’)\neq(c,X)$，其中$c, c’\in X$且$X, X’\subset \mathcal{X}$，当$\epsilon$为无理数时，$h(c,X)\neq h(c’,X’)$成立</p>
 <p>情况（1）：$c’&#x3D;c, X’\neq X$，此时$h(c,X)&#x3D;h(c’,X’)$表明$\sum_{x\in X}f(x)&#x3D;\sum_{x\in X’}f(x)$，与引理5冲突；</p>
-<p>情况（2）：$c’\neq c$，此时我们将$h(c,X)&#x3D;h(c’,X’)$改写为<br>$$<br>\epsilon\cdot (f(c)-f(c’))&#x3D;(f(c’)+\sum_{x\in X’}f(x))-(f(c)+\sum_{x\in X}f(x))<br>$$<br>由于$\epsilon$为无理数，且$f(c)-f(c’)$为某非零有理数，故等号左侧为无理数；又有限有理数的和为有理数，故等号右侧为有理数，等号显然不成立，证伪。</p>
+<p>情况（2）：$c’\neq c$，此时我们将$h(c,X)&#x3D;h(c’,X’)$改写为<br>$$<br>\epsilon\cdot (f(c)-f(c’))&#x3D;(f(c’)+\sum_{x\in X’}f(x))-(f(c)+\sum_{x\in X}f(x))<br>$$<br>由于$\epsilon$为无理数，且$f(c)-f(c’)$为某非零有理数，故<strong>等号左侧为无理数</strong>；又有限有理数的和为有理数，故<strong>等号右侧为有理数</strong>，等号显然不成立，证伪。</p>
 <p>此时，由$h(c,X)&#x3D;(1+\epsilon)\cdot f(c)+\sum_{x\in X}f(x)$是单射的，因此$\varphi$定义明确。</p>
 </blockquote>
 <ul>
@@ -355,7 +355,7 @@
 </li>
 <li><p>为考虑所有的结构化信息，作者使用<strong>所有深度&#x2F;迭代次数</strong>的模型信息。<br>$$<br>h_G&#x3D;CONCAT(READOUT({h_v^{(k)}}|k&#x3D;0,1,…,K))<br>$$</p>
 </li>
-<li><p>根据引理3和推论6，如果GIN用同一轮数所有节点特征的<strong>求和</strong>替代READOUT函数，可以证明其推广了WL测试和WL子树核（with MLP?）。</p>
+<li><p>根据引理3和推论6，如果GIN用同一轮数所有节点特征的<strong>Sum-Pooling</strong>替代READOUT函数，可以证明其推广了WL测试和WL子树核。</p>
 </li>
 </ul>
 <h2 id="Less-Powerful-but-still-Interesting-GNNs"><a href="#Less-Powerful-but-still-Interesting-GNNs" class="headerlink" title="Less Powerful but still Interesting GNNs"></a>Less Powerful but still Interesting GNNs</h2><ul>
@@ -378,8 +378,8 @@
 <p>令$W$为任意将$x\in X_1, X_2$映射到$\mathbb{R}^n$的线性变换。显然在同样的坐标位置，$X_1,X_2$对应的$Wx$符号相同（因为元素均为正数）。因此同样的坐标位置，$X_1,X_2$对应的$ReLU(Wx)$或同为正或同为0。对于使得$ReLU(Wx)$为0的位置，显然有$\sum_{x\in X_1}ReLU(Wx)&#x3D;\sum_{x\in X_2}ReLU(Wx)$；对于使得$ReLU(Wx)$为正的位置，<strong>线性特性依然被保持</strong>，有<br>$$<br>\sum_{x\in X}ReLU(Wx)&#x3D;ReLU(W\sum_{x\in X}x)<br>$$<br>由$\sum_{x\in X_1}x&#x3D;\sum_{x\in X_2}x$，$\sum_{x\in X_1}ReLU(Wx)&#x3D;\sum_{x\in X_2}ReLU(Wx)$。</p>
 </blockquote>
 <ul>
-<li>证明建立在不含偏置项的前提下，大意为单层感知机非常类似线性映射，因此GNN层<strong>退化为了邻居特征的简单加和</strong>；当存在偏置项且输出维度足够大时，单层感知机或许能够辨别不同的多重集；然而单层感知机不能够像多层感知机一样<strong>实现多重集函数的万能近似</strong></li>
-<li>因此，即使单层感知机在某种程度上能够将不同的图映射到不同的位置，这样的嵌入或许不能万却捕捉结构相似度，对于如线性分类器的简单分类器是<strong>难以拟合</strong>的。</li>
+<li>证明建立在<strong>不含偏置项</strong>的前提下，大意为单层感知机非常类似线性映射，因此GNN层<strong>退化为了邻居特征的简单加和</strong>；当存在偏置项且输出维度足够大时，单层感知机或许能够辨别不同的多重集；然而单层感知机不能够像多层感知机一样<strong>实现多重集函数的万能近似</strong></li>
+<li>因此，即使单层感知机在某种程度上能够将不同的图映射到不同的位置，这样的嵌入或许不能完全捕捉结构相似度，对于如线性分类器的简单分类器是<strong>难以拟合</strong>的</li>
 </ul>
 <h3 id="Structures-That-Confuse-Mean-and-Max-Pooling"><a href="#Structures-That-Confuse-Mean-and-Max-Pooling" class="headerlink" title="Structures That Confuse Mean and Max-Pooling"></a>Structures That Confuse Mean and Max-Pooling</h3><ul>
 <li>Mean和Max-Pooling操作具有<strong>置换不变性</strong>，但是他们并非多重集上的单射；下图中使用节点的颜色表征不同的节点特征，假设GNN在合并前先进行邻域聚合</li>
@@ -387,16 +387,16 @@
 </ul>
 <p><img src="http://test-bucket-12138.oss-cn-shanghai.aliyuncs.com/img/image-20220330155220548.png" alt="image-20220330155220548"></p>
 <ul>
-<li>下图列举了求平均和求最大值在辨别图任务中会出错的例子；(a)图表示当节点特征相同（无标签）时，求平均和求最大值均没能捕捉图的结构信息，而求和使得两图得到的结果不同（2f(a)和3f(a)）；(b) (c) 图不再赘述。</li>
+<li>下图列举了求平均、求最大值方法在辨别图任务中会出错的例子；(a)图表示当节点特征相同（无标签）时，求平均和求最大值均没能捕捉图的结构信息，而求和使得两图得到的结果不同（2f(a)和3f(a)）；(b) (c) 图不再赘述。</li>
 </ul>
 <p><img src="http://test-bucket-12138.oss-cn-shanghai.aliyuncs.com/img/image-20220330155247401.png" alt="image-20220330155247401"></p>
 <h3 id="Mean-Learns-Distribution"><a href="#Mean-Learns-Distribution" class="headerlink" title="Mean Learns Distribution"></a>Mean Learns Distribution</h3><ul>
-<li>为刻画<strong>求平均</strong>操作所能区分的多重集类别，考虑$X_1&#x3D;(S,m), X_2&#x3D;(S,k\cdot m)$，其中$X_1$和$X_2$具有相同的元素类别构成，但$X_2$对$X_1$中的每个元素都重复k次；所有的求平均聚合操作均针对两个多重集得到同样的embedding，因此求平均不捉了多重集中元素的分布（比例）信息，而非具体的多重集结构。</li>
-<li>推论8：假设$\mathcal{X}$可数，存在一个函数$f:\mathcal{X}\rightarrow \mathbb{R}^n$使得$h(X)&#x3D;\frac{1}{|X|}\sum_{x\in X}f(x)$，$h(X_1)&#x3D;h(X_2)$当且仅当多重集$X_1,X_2$具有相同的分布，即假设$|X_2|\geq|X_1|$，有$X_1&#x3D;(S,m)$且$X_2&#x3D;(S,k\cdot m),k\in \mathbb{N}_{\geq1}$</li>
+<li>为刻画<strong>求平均</strong>操作所能区分的多重集类别，考虑$X_1&#x3D;(S,m), X_2&#x3D;(S,k\cdot m)$，其中$X_1$和$X_2$具有相同的元素类别构成，但$X_2$对$X_1$中的每个元素都重复k次；所有的求平均聚合操作均针对两个多重集得到同样的embedding，因此求平均捕捉了多重集中元素的分布（比例）信息，而非具体的多重集结构。</li>
+<li>推论8：假设$\mathcal{X}$可数。存在一个函数$f:\mathcal{X}\rightarrow \mathbb{R}^n$使得$h(X)&#x3D;\frac{1}{|X|}\sum_{x\in X}f(x)$，$h(X_1)&#x3D;h(X_2)$当且仅当多重集$X_1,X_2$具有相同的分布，即假设$|X_2|\geq|X_1|$，有$X_1&#x3D;(S,m)$且$X_2&#x3D;(S,k\cdot m),k\in \mathbb{N}_{\geq1}$</li>
 </ul>
 <blockquote>
 <p>证明思路（双向论证）：</p>
-<p>不失一般性，假设$X_1$和$X_2$具有同样的分布，不妨令 $X_1&#x3D;(S,m)$且$X_2&#x3D;(S,k\cdot m), k\in \mathbb{N}<em>{\geq1}$，即二者具有相同的内在元素集合，且$X_2$中各元素的数量均为$X_1$中的k倍，于是我们有$|X_2|&#x3D;k|X_1|$且$\sum</em>{x\in X_2}f(x)&#x3D;k\cdot \sum_{x\in X_1}f(x)$。因此，<br>$$<br>\frac{1}{|X_2|}\sum_{x\in X_2}f(x)&#x3D;\frac{1}{k\cdot |X_1|}\cdot k\cdot \sum_{x\in X_1}f(x)&#x3D;\frac{1}{|X_1|}\sum_{x\in X_1}f(x)<br>$$<br>现在我们只需证明存在一个函数f使得对于分布等价的多重集$X$，$\frac{1}{|X|}\sum_{x\in X}f(x)$独一无二。由于$\mathcal{X}$可数，存在从$x\in \mathcal{X}$到自然数的映射$Z:\mathcal{X}\rightarrow \mathbb{N}$。由于多重集$X$的基数有界，因此存在$N\in\mathbb{N}$使得对于所有X有$|X|&lt;N$（例：**$f(x)&#x3D;N^{-2Z(x)}$**）</p>
+<p>不失一般性，假设$X_1$和$X_2$具有同样的分布，不妨令 $X_1&#x3D;(S,m)$且$X_2&#x3D;(S,k\cdot m), k\in \mathbb{N}<em>{\geq1}$，即二者具有相同的内在元素集合，且$X_2$中各元素的数量均为$X_1$中的k倍，于是我们有$|X_2|&#x3D;k|X_1|$且$\sum</em>{x\in X_2}f(x)&#x3D;k\cdot \sum_{x\in X_1}f(x)$。因此，<br>$$<br>\frac{1}{|X_2|}\sum_{x\in X_2}f(x)&#x3D;\frac{1}{k\cdot |X_1|}\cdot k\cdot \sum_{x\in X_1}f(x)&#x3D;\frac{1}{|X_1|}\sum_{x\in X_1}f(x)<br>$$<br>现在我们只需证明存在一个函数f使得对于分布等价的多重集$X$，$\frac{1}{|X|}\sum_{x\in X}f(x)$相等且独一无二。由于$\mathcal{X}$可数，存在从$x\in \mathcal{X}$到自然数的映射$Z:\mathcal{X}\rightarrow \mathbb{N}$。由于多重集$X$的基数有界，因此存在$N\in\mathbb{N}$使得对于所有X有$|X|&lt;N$，举例有**$f(x)&#x3D;N^{-2Z(x)}$**</p>
 </blockquote>
 <ul>
 <li>求平均聚合方法在<strong>图的统计和分布信息比实际结构更加重要</strong>的情况下表现较好。除此之外，当<strong>节点特征互不相同、很少重复</strong>时，其表达力与求和聚合方法相当。</li>
@@ -431,7 +431,7 @@
 </li>
 <li>模型和配置<ul>
 <li>GIN-ε表示使用<strong>梯度下降</strong>学习ε参数；GIN-0表示将ε<strong>固定为0</strong></li>
-<li>GIN-0不仅和GIN-ε具有相同的训练集拟合能力，同时具有很强的泛化能力（测试集准确率稍好于GIN-ε）</li>
+<li>GIN-0不仅和GIN-ε具有相同的训练集拟合能力，同时具有很强的<strong>泛化能力</strong>（测试集准确率稍好于GIN-ε）</li>
 <li>其他GNN变体按照“聚合方法-感知器”的方式命名（忽略微小的模型改动则<strong>GCN: mean-1-layer</strong>, <strong>GraphSAGE: max-1-layer</strong>）</li>
 <li>所有GIN及GNN变体模型采用同样的整图读取函数<ul>
 <li>sum用于生物信息数据集，mean用于社交网络数据集</li>
@@ -455,8 +455,8 @@
 <ul>
 <li>测试集表现<ul>
 <li>有较强表达能力的GNN能够精确捕捉图结构，因此具有较好的<strong>泛化能力</strong></li>
-<li>GIN(-0)在9个数据集中超越了所有的GNN模型；尤其在社交网络数据集上，使用sum聚合方式捕捉图结构明显优于其他模型；即使将节点度（的one-hot）作为输入特征，采用平均聚合方式的效果也远差于采用求和聚合方式的GNN</li>
-<li>GIN-0表现优于GIN-ε，可能是因为模型较为简单</li>
+<li>**GIN(-0)**在9个数据集中超越了所有的GNN模型；尤其在社交网络数据集上，使用sum聚合方式捕捉图结构明显优于其他模型；即使将节点度（的one-hot）作为输入特征，采用平均聚合方式的效果也远差于采用求和聚合方式的GNN</li>
+<li>GIN-0表现优于GIN-ε，可能是因为模型较为<strong>简单</strong></li>
 </ul>
 </li>
 </ul>
@@ -544,7 +544,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Personal-Summary"><span class="nav-number">1.</span> <span class="nav-text">Personal Summary</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Abstract"><span class="nav-number">2.</span> <span class="nav-text">Abstract</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Introduction"><span class="nav-number">3.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Preliminaries"><span class="nav-number">4.</span> <span class="nav-text">Preliminaries</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Theoretical-Framework-Overview"><span class="nav-number">5.</span> <span class="nav-text">Theoretical Framework: Overview</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Building-Powerful-Graph-Neural-Networks"><span class="nav-number">6.</span> <span class="nav-text">Building Powerful Graph Neural Networks</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Graph-Isomorphism-Network-GIN"><span class="nav-number">6.1.</span> <span class="nav-text">Graph Isomorphism Network (GIN)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Graph-level-Readout-of-GIN"><span class="nav-number">6.2.</span> <span class="nav-text">Graph-level Readout of GIN</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Less-Powerful-but-still-Interesting-GNNs"><span class="nav-number">7.</span> <span class="nav-text">Less Powerful but still Interesting GNNs</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Layer-Perceptions-are-not-Sufficient"><span class="nav-number">7.1.</span> <span class="nav-text">1-Layer Perceptions are not Sufficient</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Structures-That-Confuse-Mean-and-Max-Pooling"><span class="nav-number">7.2.</span> <span class="nav-text">Structures That Confuse Mean and Max-Pooling</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Mean-Learns-Distribution"><span class="nav-number">7.3.</span> <span class="nav-text">Mean Learns Distribution</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Max-pooling-Learns-Sets-with-Distinct-Elements"><span class="nav-number">7.4.</span> <span class="nav-text">Max-pooling Learns Sets with Distinct Elements</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Remoarks-on-Other-Aggregator"><span class="nav-number">7.5.</span> <span class="nav-text">Remoarks on Other Aggregator</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Other-Related-Work"><span class="nav-number">8.</span> <span class="nav-text">Other Related Work</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Experiments"><span class="nav-number">9.</span> <span class="nav-text">Experiments</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Results"><span class="nav-number">9.1.</span> <span class="nav-text">Results</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Conclusion"><span class="nav-number">10.</span> <span class="nav-text">Conclusion</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Personal-Review"><span class="nav-number">1.</span> <span class="nav-text">Personal Review</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Abstract"><span class="nav-number">2.</span> <span class="nav-text">Abstract</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Introduction"><span class="nav-number">3.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Preliminaries"><span class="nav-number">4.</span> <span class="nav-text">Preliminaries</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Theoretical-Framework-Overview"><span class="nav-number">5.</span> <span class="nav-text">Theoretical Framework: Overview</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Building-Powerful-Graph-Neural-Networks"><span class="nav-number">6.</span> <span class="nav-text">Building Powerful Graph Neural Networks</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Graph-Isomorphism-Network-GIN"><span class="nav-number">6.1.</span> <span class="nav-text">Graph Isomorphism Network (GIN)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Graph-level-Readout-of-GIN"><span class="nav-number">6.2.</span> <span class="nav-text">Graph-level Readout of GIN</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Less-Powerful-but-still-Interesting-GNNs"><span class="nav-number">7.</span> <span class="nav-text">Less Powerful but still Interesting GNNs</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Layer-Perceptions-are-not-Sufficient"><span class="nav-number">7.1.</span> <span class="nav-text">1-Layer Perceptions are not Sufficient</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Structures-That-Confuse-Mean-and-Max-Pooling"><span class="nav-number">7.2.</span> <span class="nav-text">Structures That Confuse Mean and Max-Pooling</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Mean-Learns-Distribution"><span class="nav-number">7.3.</span> <span class="nav-text">Mean Learns Distribution</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Max-pooling-Learns-Sets-with-Distinct-Elements"><span class="nav-number">7.4.</span> <span class="nav-text">Max-pooling Learns Sets with Distinct Elements</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Remoarks-on-Other-Aggregator"><span class="nav-number">7.5.</span> <span class="nav-text">Remoarks on Other Aggregator</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Other-Related-Work"><span class="nav-number">8.</span> <span class="nav-text">Other Related Work</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Experiments"><span class="nav-number">9.</span> <span class="nav-text">Experiments</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Results"><span class="nav-number">9.1.</span> <span class="nav-text">Results</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Conclusion"><span class="nav-number">10.</span> <span class="nav-text">Conclusion</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
