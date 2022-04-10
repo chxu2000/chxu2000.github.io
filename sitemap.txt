@@ -1,5 +1,6 @@
-http://example.com/2022/03/30/How-Powerful-are-Graph-Neural-Networks/
 http://example.com/about/index.html
+http://example.com/2022/04/01/Regulating-systemic-crises-Stemming-the-contagion-risk-in-networked-loans-through-deep-graph-learning/
+http://example.com/2022/03/30/How-Powerful-are-Graph-Neural-Networks/
 http://example.com/2022/03/22/Learn-Pytorch/
 http://example.com/2022/03/17/Learn-Git/
 http://example.com/2022/03/13/%E8%B0%83%E7%A0%94-%E7%B3%BB%E7%BB%9F%E6%80%A7%E9%87%91%E8%9E%8D%E9%A3%8E%E9%99%A9%E8%AE%A1%E7%AE%97%E6%A8%A1%E5%9E%8B/
@@ -10,10 +11,10 @@ http://example.com/categories/index.html
 http://example.com/tags/index.html
 http://example.com/2022/03/13/hello-world/
 http://example.com/
+http://example.com/tags/Graph-Neural-Networks/
 http://example.com/tags/Skills/
 http://example.com/tags/Financial-System-Risk/
-http://example.com/tags/Graph-Neural-Networks/
+http://example.com/categories/Lab-Graph/
 http://example.com/categories/Skills-Git/
 http://example.com/categories/Skills-Pytorch/
 http://example.com/categories/Lab-FSR/
-http://example.com/categories/Lab-Graph/
