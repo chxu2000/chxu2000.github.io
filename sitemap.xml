@@ -126,14 +126,14 @@
   </url>
   
   <url>
-    <loc>http://example.com/tags/Graph-Neural-Networks/</loc>
+    <loc>http://example.com/tags/Skills/</loc>
     <lastmod>2022-04-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/Skills/</loc>
+    <loc>http://example.com/tags/Graph-Neural-Networks/</loc>
     <lastmod>2022-04-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -156,14 +156,14 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/Lab-Graph/</loc>
+    <loc>http://example.com/categories/Skills-Git/</loc>
     <lastmod>2022-04-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/Skills-Git/</loc>
+    <loc>http://example.com/categories/Lab-Graph/</loc>
     <lastmod>2022-04-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
