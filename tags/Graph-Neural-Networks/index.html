@@ -1,380 +1,313 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.4.1">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
-
-<link rel="stylesheet" href="/css/main.css">
-
-<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
-  </script>
-
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Ted Xu&#39;s Blog">
-<meta property="og:url" content="http://example.com/tags/Graph-Neural-Networks/index.html">
-<meta property="og:site_name" content="Ted Xu&#39;s Blog">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:author" content="Ted Xu">
-<meta name="twitter:card" content="summary">
-
-<link rel="canonical" href="http://example.com/tags/Graph-Neural-Networks/">
-
-
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : false,
-    lang   : 'zh-CN'
-  };
-</script>
-
-  <title>标签: Graph Neural Networks | Ted Xu's Blog</title>
-  
-
-
-
-
-
-
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
-
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">Ted Xu's Blog</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-    </div>
-  </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
-
-  </li>
-  </ul>
-</nav>
-
-
-
-
-</div>
-    </header>
-
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-
-  <a href="https://github.com/Ted-0711" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content tag">
-            
-
-  
-  
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <h2 class="collection-header">Graph Neural Networks
-          <small>标签</small>
-        </h2>
-      </div>
-
-      
-    <div class="collection-year">
-      <span class="collection-header">2022</span>
-    </div>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2022-03-30T02:13:00+08:00"
-              content="2022-03-30">
-          03-30
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/03/30/How-Powerful-are-Graph-Neural-Networks/" itemprop="url">
-            <span itemprop="name">How Powerful are Graph Neural Networks?</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-    </div>
-  </div>
-  
-  
-  
-
-  
-
-
-
-          </div>
-          
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="robots" content="noindex"><meta><title>标签: Graph Neural Networks - Ted Xu&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Ted Xu&#039;s Blog"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Ted Xu&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta property="og:type" content="blog"><meta property="og:title" content="Ted Xu&#039;s Blog"><meta property="og:url" content="http://example.com/"><meta property="og:site_name" content="Ted Xu&#039;s Blog"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="http://example.com/img/og_image.png"><meta property="article:author" content="Ted Xu"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com"},"headline":"Ted Xu's Blog","image":["http://example.com/img/og_image.png"],"author":{"@type":"Person","name":"Ted Xu"},"publisher":{"@type":"Organization","name":"Ted Xu's Blog","logo":{"@type":"ImageObject","url":{"text":"Ted Xu's Blog"}}},"description":""}</script><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+          Array
+              .from(document.querySelectorAll('.tab-content'))
+              .forEach($tab => {
+                  $tab.classList.add('is-hidden');
+              });
+          Array
+              .from(document.querySelectorAll('.tabs li'))
+              .forEach($tab => {
+                  $tab.classList.remove('is-active');
+              });
+          const $activeTab = document.querySelector(location.hash);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+          const $tabMenu = document.querySelector(`a[href="${location.hash}"]`);
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
       }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">Ted Xu</p>
-  <div class="site-description" itemprop="description"></div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">6</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">5</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">4</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-        <a href="https://github.com/Ted-0711" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Ted-0711" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="mailto:chrispaul183@foxmail.com" title="E-Mail → mailto:chrispaul183@foxmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
-      </span>
-  </div>
-
-
-
-      </div>
-
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2022</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Ted Xu</span>
-</div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
-  </div>
-
-        
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
-
-  
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/muse.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
-  
-
-</body>
-</html>
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.0.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/">Ted Xu&#039;s Blog</a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Github" href="https://github.com/Ted-0711"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/tags">标签</a></li><li class="is-active"><a href="#" aria-current="page">Graph Neural Networks</a></li></ul></nav></div></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-03-29T18:13:00.000Z" title="2022/3/30 02:13:00">2022-03-30</time>发表</span><span class="level-item"><time dateTime="2022-03-31T10:44:08.894Z" title="2022/3/31 18:44:08">2022-03-31</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Lab-Graph/">Lab - Graph</a></span><span class="level-item">1 小时读完 (大约7057个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/03/30/How-Powerful-are-Graph-Neural-Networks/">How Powerful are Graph Neural Networks?</a></h1><div class="content"><h2 id="Personal-Review"><a href="#Personal-Review" class="headerlink" title="Personal Review"></a>Personal Review</h2><p>这篇文章提出了一个<strong>理论框架</strong>，用于分析GNNs在捕捉图结构时的表达能力，我认为可以分为如下四部分。</p>
+<p>文章第一部分是<strong>理论证明</strong>。首先，通过证明凡是经过GNN映射为不同embedding的两张图，都能够被WL图异构测试分辨，说明了<strong>GNN在辨别图任务上至多与WL测试的能力相当</strong>；接着提出并论证了<strong>GNN达到与WL测试相当的能力的条件</strong>，即AGGREGATE、COMBINE、及READOUT函数均满足单射，这也为搭建GIN模型奠定了基础；随后作者证明了当输入特征的空间可数时，经过有穷次变换的节点特征向量的空间同样是<strong>可数</strong>的，这为之后论证时将节点特征映射到自然数提供了便利。</p>
+<p>文章第二部分<strong>搭建了图异构网络GIN</strong>，即<strong>满足</strong>先前所述与WL测试能力相当<strong>条件</strong>的GNN模型。其先后证明了<strong>基于sum-pooling的AGGREGATE、COMBINE方法</strong>能够实现<strong>单射函数</strong>，并利用多层感知机的万能近似定理给出了建模后的节点更新参数化表示；最后如果需要进行图分类任务，READOUT函数也可以采取AGGREGATE函数类似的<strong>sum-pooling思想</strong>，值得注意的是这里作者为了结合浅层次具有泛化能力和深层次具有表达能力的embedding，认为可以将他们拼接后作为输出的全图embedding。</p>
+<p>文章第三部分说明了其他GNN模型的不足。首先，如果用<strong>单层感知器</strong>模型代替多层感知机，则由于其线性特性，在不带偏置的前提下，存在不同输入得到相同输出的情况，即不满足单射条件，因此表达能力较弱；若使用Mean Max-Pooling方法，则由于Mean Pooling只捕捉节点<strong>特征分布</strong>信息，Max Pooling将多重集<strong>退化为集合</strong>，均存在不能够捕捉图结构信息的情况；接着作者分别针对Mean Max-Pooling方法展开了更细致讨论，即当<strong>图的统计和分布信息</strong>比实际结构更加重要时，Mean-Pooling的效果较好；当需要识别<strong>代表性、主干元素</strong>时，Max-Pooling则较为适合。</p>
+<p>文章第四部分为实验验证。作者通过对比GIN与GNN及其他Baseline模型在训练集上的图结构表达能力、以及在测试集上的泛化能力，验证了GIN性能的最优性。一个有趣的现象是当作者将ε参数固定为0时，GIN模型的效果较好，这有可能是模型较为简单的缘故。</p>
+<p>这篇文章以论证为主，辅以模型搭建、对比与实验，且中间不存在论证缺环，看过一遍后让人觉得酣畅淋漓，以上便是我对这篇文章的看法。</p>
+<h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>图形神经网络（GNNs）是一个用于图表示学习的有效框架。GNNs遵循邻域聚合方案，其中节点的表示向量是通过递归聚合和转换其相邻节点的表示向量计算得来的。许多GNN的变体已经被提出，并在节点和图的分类任务上取得了最先进的成果。然而，尽管GNNs彻底改变了图的表示学习，但人们对它们的<strong>表征特性和限制</strong>只有有限的了解。在这里，我们提出了一个理论框架，用于分析GNNs在捕捉不同图结构方面的表现力。我们的结果描述了流行GNN变体的鉴别能力，例如GCN和GraphSAGE，并表明它们不能学会区分某些简单的图结构。然后，我们搭建了一个简单的架构，该架构被证明是是GNN模型中最具表现力的，并且与Weisfeiler-Lehman图的同构性测试一样强大。 我们从经验上在一些图分类基准上验证了我们的理论发现，并证明我们的模型实现了最先进的性能。</p>
+<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><ul>
+<li>GNN聚合操作——k次迭代聚合<strong>k阶近邻</strong>的信息</li>
+<li>GNN变体——不同的聚合和Pooling方法<ul>
+<li>由<strong>经验直觉</strong>、<strong>启发式</strong>、<strong>实验结果</strong>驱动设计</li>
+</ul>
+</li>
+<li>提出分析GNN表达能力的理论框架——如果GNN的聚合方案具有足够强的表达能力，能够建模<strong>单射函数</strong>，那么GNN就可以具有与WL测试同样的鉴别能力</li>
+<li>主要结论<ul>
+<li>证明GNN在分辨图结构任务中<strong>至多</strong>达到WL测试的能力</li>
+<li>建立邻域聚合和整图读取函数的<strong>条件</strong>，使得到的GNN与WL测试一样强大</li>
+<li>发现不能够被流行GNN变体（GCN、GraphSAGE）所辨别的图结构，并准确刻画出其能够辨别的图结构种类</li>
+<li>实现了一个简单的神经网络框架GIN，其辨别&#x2F;表达能力与WL测试相当</li>
+</ul>
+</li>
+</ul>
+<h2 id="Preliminaries"><a href="#Preliminaries" class="headerlink" title="Preliminaries"></a>Preliminaries</h2><ul>
+<li><p>GNN使用图结构和节点特征学习节点或全图的向量表示，传统GNN遵循<strong>迭代邻域聚合</strong>策略<br>$$<br>a_v^{(k)}&#x3D;AGGREGATE^{(k)}({h_u^{(k-1)}:u\in N(v)}), \space h_v^{(k)}&#x3D;COMBINE(h_v^{(k-1)},a_v^{(k)})<br>$$</p>
+<ul>
+<li><p>GraphSAGE的pooling变体的AGGREGATE函数形式（聚合：线性层+MAX）<br>$$<br>a_v^{(k)}&#x3D;MAX({ReLU(W\cdot h_u^{(k-1)}, \forall u\in N(v)})<br>$$<br>COMBINE函数形式（结合：拼接+线性层）<br>$$<br>W\cdot [h_v^{(k-1)},\space a_v^{(k)}]<br>$$</p>
+</li>
+<li><p>GCN的AGGREGATE和COMBINE函数形式（MEAN+线性层）<br>$$<br>h_v^{(k)}&#x3D;ReLU(W\cdot MEAN{h_u^{(k-1)}, \space \forall u\in N(v) \cup {v}})<br>$$</p>
+</li>
+<li><p>节点分类任务可以直接使用K轮迭代得到的$h_v^{(K)}$进行预测；全图分类任务需要对得到图中所有节点的向量表示进行READOUT，常见有pooling函数<br>$$<br>h_G&#x3D;READOUT({h_v^{(k)}|v\in G})<br>$$</p>
+</li>
+</ul>
+</li>
+<li><p>WL test用于判断图的同构性，该算法（一维）重复以下两步：</p>
+<ol>
+<li><strong>聚合</strong>节点及其邻居的标签</li>
+<li>用哈希函数将聚合后的<strong>多重集</strong>映射到新的标签</li>
+</ol>
+<p>只要某一迭代出现两图标签分布不同，则不同构。</p>
+<ul>
+<li>将所有轮数得到的不同标签数量作为<strong>图的特征向量</strong>（WL子树核）</li>
+<li>实际上第k轮WL test得到的节点对应<strong>高度为k的子树</strong>结构</li>
+</ul>
+</li>
+</ul>
+<h2 id="Theoretical-Framework-Overview"><a href="#Theoretical-Framework-Overview" class="headerlink" title="Theoretical Framework: Overview"></a>Theoretical Framework: Overview</h2><ul>
+<li>假设节点的输入特征是有限的，则对于有限图，我们可以给不同的特征向量赋予<strong>独一无二的标签</strong> {a, b, c, …}，由此一组邻接节点的特征向量构成了一个<strong>多重集</strong>（可能存在不同节点具有同样的特征向量）</li>
+<li>多重集即允许重复元素的集合，可以表示为二元组 X&#x3D;(S, m)</li>
+<li>研究GNN的表达能力，即分析GNN会不会将两个节点映射到相同的embedding空间。可以将分析简化为GNN是否会将两个多重集（邻居节点集）映射到同一种embedding表示；一个具有最大化能力的GNN永远不会将两个不同的多重集映射到同一表示，即为单射函数</li>
+<li>将GNN的聚合方案抽象为一类<strong>应用于多重集的函数</strong>，分析是否为<strong>单射</strong></li>
+</ul>
+<h2 id="Building-Powerful-Graph-Neural-Networks"><a href="#Building-Powerful-Graph-Neural-Networks" class="headerlink" title="Building Powerful Graph Neural Networks"></a>Building Powerful Graph Neural Networks</h2><ul>
+<li>首先，刻画通用GNN模型的<strong>最大表达能力</strong></li>
+<li><strong>引理2</strong>：令G1和G2是异构的两个图，若存在某GNN $A: G\rightarrow R^d$将G1和G2映射为了不同的embeddings，则WL图异构测试同样认为G1和G2异构</li>
+</ul>
+<blockquote>
+<p>证明思路（反证+归纳法）：</p>
+<p><strong>不妨假设$A(G_1)\neq A(G_2)$但WL测试无法判别二者异构。</strong>假设经过了0到k轮迭代，则所有轮次中$G_1$和$G_2$均有同样的WL测试节点标签。<strong>下面用归纳法证在同样的图$G&#x3D;G_1\space or\space G_2$上，$l_v^{(i)}&#x3D;l_u^{(i)}$则$h_v^{(i)}&#x3D;h_u^{(i)}$。</strong></p>
+<p>由于i&#x3D;0的初始状态时，有对任意节点u、v，$l_v^{(0)}&#x3D;l_u^{(0)}$则$h_v^{(0)}&#x3D;h_u^{(0)}$（二者起始的节点特征相同）。不妨假设前j轮满足条件，若$l_v^{(j+1)}&#x3D;l_u^{(j+1)}$，则必然有<br>$$<br>(l_v^{(j)},\space {l_w^{(j)}:w\in N(v)})&#x3D;(l_u^{(j)},\space {l_w^{(j)}:w\in N(u)})<br>$$<br>根据假设有<br>$$<br>(h_v^{(j)},\space {h_w^{(j)}:w\in N(v)})&#x3D;(h_u^{(j)},\space {h_w^{(j)}:w\in N(u)})<br>$$<br>则由于GNN采用同样的AGGREGATE和COMNBINE方法，输入相同则输出相同，即$h_v^{(i+1)}&#x3D;h_u^{(i+1)}$，“$l_v^{(i)}&#x3D;l_u^{(i)}$则$h_v^{(i)}&#x3D;h_u^{(i)}$”得证。</p>
+<p>由此，<strong>h由l决定</strong>，且整图读取函数相同，根据条件必然有$A(G_1)&#x3D;A(G_2)$，矛盾。</p>
+</blockquote>
+<ul>
+<li><p>因此，任何以聚合为基础的GNN在辨别图任务上<strong>至多</strong>与WL测试的能力相当；如果邻域聚合以及整图读取函数满足单射，则GNN与WL测试具有同样的能力。</p>
+</li>
+<li><p><strong>定理3</strong>：令$A: G\rightarrow R^d$为一个GNN模型。当有足够多的GNN层时，A能够将任何WL测试认为异构的图映射到不同的embeddings，如果下述条件成立的话：</p>
+<ul>
+<li><p>A通过如下函数迭代聚合并更新节点特征<br>$$<br>h_v^{(k)}&#x3D;\phi(h_v^{(k-1)}, f({h_u^{(k-1)}:u\in N(v)}))<br>$$<br>其中函数$f, \Phi$均为<strong>单射函数</strong></p>
+</li>
+<li><p>A的整图读取函数（输入为节点特征的多重集${h_v^{(k)}}$）为<strong>单射函数</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>证明思路（归纳法）：</p>
+<p>令$G_1, G_2$为任意WL测试能够辨别的异构图。</p>
+<p>由于整图读取函数为单射，则在经过足够轮次的迭代后，A的邻域聚合过程将两张图映射为了不同多重集的节点特征。</p>
+<p>不妨假设A的节点表示更新函数如下，其中$f, \phi$为单射函数<br>$$<br>h_v^{(k)}&#x3D;\phi(h_v^{(k-1)},f({h_u^{(k-1)}: u\in N(v)}))<br>$$<br>而WL测试应用预定义的单射哈希函数$g$更新WL节点的标签<br>$$<br>l_v^{(k)}&#x3D;g(l_v^{(k-1)}, {l_u^{(k-1)}: u\in N(v)})<br>$$<br>以下通过<strong>归纳法</strong>证明，对于任意迭代次数k，**存在单射函数$\varphi$使得$h_v^{(k)}&#x3D;\varphi(l_v^{(k)})$**。特别的，当k&#x3D;0即初始状态时，因为初始特征相同，$\varphi$为恒等映射。</p>
+<p>不妨令k前-1轮满足假设，则用$\varphi(l_v^{(k-1)})$替换$h_v^{(k-1)}$得到<br>$$<br>h_v^{(k)}&#x3D;\phi(\varphi(l_v^{(k-1)}),f({\varphi(l_u^{(k-1)})}: u\in N(v)}))<br>$$<br>由单射函数的组合是单射的，可以找到单射函数$\psi$使得<br>$$<br>h_v^{(k)}&#x3D;\psi(l_v^{(k-1)},{l_u^{(k-1)}: u\in N(v)})<br>$$<br>于是我们得到<br>$$<br>h_v^{(k)}&#x3D;\psi g^{-1}g(l_v^{(k-1)},{l_u^{(k-1)}: u\in N(v)})&#x3D;\psi g^{-1}(l_v^{(k)})<br>$$<br><strong>$\varphi&#x3D;\psi g^{-1}$为单射函数</strong>，于是找到单射函数$\varphi$使得$h_v^{(k)}&#x3D;\varphi(l_v^{(k)})$。若在第k轮时，WL测试发现$G_1, G_2$异构，故二者多重集$l_v^{(k)}$不同。二图由图神经网络得到的节点嵌入${h_v^{(k)}}&#x3D;{\varphi(l_v^{(k)})}$必然不同。</p>
+</blockquote>
+<ul>
+<li>对于可数集合，单射性较好的刻画了函数反映输入不同的能力（本文仅考虑节点特征可数的情况）。</li>
+<li><strong>引理4</strong>：假设输入的特征空间$\mathcal{X}$可数。令$g^{(k)}$为GNN的k (k&#x3D;1, …, L)层<strong>参数化函数</strong>，其中$g^{(1)}$定义在多重集$X\subset \mathcal{X}$（$X$有限大小）上。$g^{(k)}$的取值范围即节点隐藏特征空间$h_v^{(k)}$也是<strong>可数的</strong>（对所有k&#x3D;1, …, L）。</li>
+</ul>
+<blockquote>
+<p>证明思路：</p>
+<p>首先，自然数集经有限次笛卡尔积得到的集合是可数的（由<strong>归纳法</strong>易证，$\mathbb{N}\times \mathbb{N}$可数因为存在$\mathbb{N}\times \mathbb{N}$到$\mathbb{N}$的双射$\phi(m,n)&#x3D;2^{m-1}\cdot(2n+1)$）。</p>
+<p>目标：证明可数集的有限大小多重集上任意函数$g$的值域也是可数的。</p>
+<p>由于g(X)为X上的<strong>单射函数</strong>，因此只需要证明<strong>所有多重集$X\subset \mathcal{X}$可数</strong>；</p>
+<p>两可数集的并可数，令$\mathcal{X’}&#x3D;\mathcal{X}\cup{e}$，其中e为占位元素，其不属于$\mathcal{X}$</p>
+<p>接下来，构建从$X\subset \mathcal{X}$到$\mathcal{X’^k}$的单射函数$h$：由$\mathcal{X}$可数，存在一种映射$Z: \mathcal{X}\rightarrow \mathbb{N}$即从$x\in \mathcal{X}$到自然数。若$|X|&#x3D;n$，由多重集$X$的大小有限，则存在$k\in N$使得所有$X$的$n&lt;k$，我们可以将$h$定义为<br>$$<br>h(X)&#x3D;(x_1,x_2,…,x_n,e,e,e,…)<br>$$<br>其中由n到k的位置均被占位元素e填满，则显然$h$为<strong>单射</strong>，因为对任意有限大小的多重集$X$和$Y$，$h(X)&#x3D;h(Y)$当且仅当二者相等。故得证。</p>
+</blockquote>
+<ul>
+<li>值得注意的是，由于GNN实际上是将WL测试中的子树结构映射到<strong>更低维度</strong>的空间，因此不仅能够用于辨别不同的图，还能够捕捉图结构之间的<strong>相似性</strong>（同时应对稀疏、噪声），这是WL测试所不具有的。</li>
+</ul>
+<h3 id="Graph-Isomorphism-Network-GIN"><a href="#Graph-Isomorphism-Network-GIN" class="headerlink" title="Graph Isomorphism Network (GIN)"></a>Graph Isomorphism Network (GIN)</h3><ul>
+<li>确定具有最强表达能力GNN的条件后，作者提出了一个简单的架构（<strong>图同构网络GIN</strong>），满足定理3的条件</li>
+<li>为了建模邻域聚合的单射多重集函数，作者用神经网络对通用多重集函数进行参数化</li>
+<li><strong>引理5</strong>：假设$\mathcal{X}$可数。存在一个函数$f: \mathcal{X}\rightarrow \mathbb{R}^n$使得$h(X)&#x3D;\sum_{x\in X}f(x)$对于每一个有限长度的多重集$X\subset \mathcal{X}$具有独一无二的值（<strong>单射</strong>）。更进一步，任何多重集函数都能够找到恰当的函数$\phi$，使其被分解为$g(X)&#x3D;\phi(\sum_{x\in X}f(x))$。</li>
+</ul>
+<blockquote>
+<p>证明思路（举例法、类似one-hot编码）：</p>
+<p>由于$\mathcal{X}$可数，存在映射$Z:\mathcal{X}\rightarrow \mathbb{N}$</p>
+<p>存在$N\in \mathbb{N}$使得对所有$X$有$|X|&lt;N$，可以令$f(x)&#x3D;N^{-Z(x)}$，则$h(X)&#x3D;\sum_{x\in X}f(x)$为多重集上的单射函数（N为基数）</p>
+<p>此时，由$h(X)&#x3D;\sum_{x\in X}f(x)$是单射的，因此$\phi$定义明确。</p>
+</blockquote>
+<ul>
+<li>以引理5中的通用多集函数建模机制作为构建块，我们可以构想出<strong>节点表示上的通用函数及其邻域的多重集聚合方案</strong>，进而满足定理3中的单射条件。</li>
+<li><strong>推论6</strong>：假设$\mathcal{X}$可数。存在一个函数$f: \mathcal{X} \rightarrow \mathbb{R}^n$使得存在无数种$\epsilon$的选择（含无理数），令$h(c,X)&#x3D;(1+\epsilon)\cdot f(c)+\sum_{x\in X}f(x)$对于每一对$(c,X)$都具有独一无二的值，其中$c\in \mathcal{X}$并且$X\subset \mathcal{X}$是一个有限大小的多重集。更进一步，任何在上述二元组上的函数$g$都能够利用某函数$\varphi$，被分解为$g(c,X)&#x3D;\varphi((1+\epsilon)\cdot f(c)+\sum_{x\in X}f(x))$</li>
+</ul>
+<blockquote>
+<p>证明思路（反证法、分情况讨论）：</p>
+<p>不妨令$f(x)&#x3D;N^{-Z(x)}$，定义与引理5证明相同。</p>
+<p>目标：证明对任意$(c’,X’)\neq(c,X)$，其中$c, c’\in X$且$X, X’\subset \mathcal{X}$，当$\epsilon$为无理数时，$h(c,X)\neq h(c’,X’)$成立</p>
+<p>情况（1）：$c’&#x3D;c, X’\neq X$，此时$h(c,X)&#x3D;h(c’,X’)$表明$\sum_{x\in X}f(x)&#x3D;\sum_{x\in X’}f(x)$，与引理5冲突；</p>
+<p>情况（2）：$c’\neq c$，此时我们将$h(c,X)&#x3D;h(c’,X’)$改写为<br>$$<br>\epsilon\cdot (f(c)-f(c’))&#x3D;(f(c’)+\sum_{x\in X’}f(x))-(f(c)+\sum_{x\in X}f(x))<br>$$<br>由于$\epsilon$为无理数，且$f(c)-f(c’)$为某非零有理数，故<strong>等号左侧为无理数</strong>；又有限有理数的和为有理数，故<strong>等号右侧为有理数</strong>，等号显然不成立，证伪。</p>
+<p>此时，由$h(c,X)&#x3D;(1+\epsilon)\cdot f(c)+\sum_{x\in X}f(x)$是单射的，因此$\varphi$定义明确。</p>
+</blockquote>
+<ul>
+<li>根据以上论述，我们可以利用<strong>多层感知机</strong>对$f$和$\varphi$进行建模和学习（万能近似定理）。实际应用时，我们利用一个多层感知机建模$f^{(k+1)}\varphi^{(k)}$（函数的组合，对于第一次迭代如果输入特征是<strong>one-hot编码</strong>，则其求和也是单射函数，因此不需要$f^{(1)}$），$\epsilon$可以使一个可学习的参数或固定的标量。GIN的更新节点表示如下：<br>$$<br>h_v^{(k)}&#x3D;MLP^{(k)}((1+\epsilon^{(k)})\cdot h_v^{(k-1)}+\sum_{u\in N(v)}h_u^{(k-1)})<br>$$</li>
+</ul>
+<h3 id="Graph-level-Readout-of-GIN"><a href="#Graph-level-Readout-of-GIN" class="headerlink" title="Graph-level Readout of GIN"></a>Graph-level Readout of GIN</h3><ul>
+<li><p>GIN模型学习到的节点嵌入可以直接应用于如<strong>节点分类</strong>或<strong>链接预测</strong>的任务；</p>
+</li>
+<li><p>对于图分类任务，作者提出如下的“读出”函数，<strong>根据独立节点的嵌入产生整张图的嵌入</strong>。</p>
+</li>
+<li><p>节点表示（与子树结构相关）随着迭代轮数的增加变得愈发<strong>精确</strong>与<strong>全局化</strong>，足够轮数的训练能够实现好的辨别效果。但早期的特征具有更好的泛化能力。</p>
+</li>
+<li><p>为考虑所有的结构化信息，作者使用<strong>所有深度&#x2F;迭代次数</strong>的模型信息。<br>$$<br>h_G&#x3D;CONCAT(READOUT({h_v^{(k)}}|k&#x3D;0,1,…,K))<br>$$</p>
+</li>
+<li><p>根据引理3和推论6，如果GIN用同一轮数所有节点特征的<strong>Sum-Pooling</strong>替代READOUT函数，可以证明其推广了WL测试和WL子树核。</p>
+</li>
+</ul>
+<h2 id="Less-Powerful-but-still-Interesting-GNNs"><a href="#Less-Powerful-but-still-Interesting-GNNs" class="headerlink" title="Less Powerful but still Interesting GNNs"></a>Less Powerful but still Interesting GNNs</h2><ul>
+<li>作者探究了包括GCN、GraphSAGE在内不满足定理3的GNN变体</li>
+<li>所探究变体与前述GIN的节点更新表示主要有两个不同点：<ol>
+<li><strong>单层</strong>感知机替代<strong>多层</strong>感知机</li>
+<li><strong>平均或最大</strong>池化代替<strong>求和</strong></li>
+</ol>
+</li>
+<li>作者刻画了不同GNN变体所不能够捕捉的图结构，并且探讨了图学习的隐含条件</li>
+</ul>
+<h3 id="1-Layer-Perceptions-are-not-Sufficient"><a href="#1-Layer-Perceptions-are-not-Sufficient" class="headerlink" title="1-Layer Perceptions are not Sufficient"></a>1-Layer Perceptions are not Sufficient</h3><ul>
+<li>引理5实现了从<strong>不同多重集</strong>到<strong>不同embedding</strong>的映射，能够通过<strong>多层</strong>感知机实现（万能近似定理）</li>
+<li>然而许多现有的GNN使用单层感知机$\sigma W$（线性映射+非线性激活函数）进行映射，引理7证明确实存在其<strong>不能够区分</strong>的邻域结构（多重集）</li>
+<li>引理7：存在有限多重集$X_1\neq X_2$使得对于任意线性映射$W$，$\sum_{x\in X_1}ReLU(Wx)&#x3D;\sum_{x\in X_2}ReLU(Wx)$.</li>
+</ul>
+<blockquote>
+<p>证明思路（举例）：</p>
+<p>不妨令$X_1&#x3D;{1,1,1,1,1},\space X_2&#x3D;{2,3}$为两个由正数组成的多重集，<strong>各自的和相等</strong>。</p>
+<p>令$W$为任意将$x\in X_1, X_2$映射到$\mathbb{R}^n$的线性变换。显然在同样的坐标位置，$X_1,X_2$对应的$Wx$符号相同（因为元素均为正数）。因此同样的坐标位置，$X_1,X_2$对应的$ReLU(Wx)$或同为正或同为0。对于使得$ReLU(Wx)$为0的位置，显然有$\sum_{x\in X_1}ReLU(Wx)&#x3D;\sum_{x\in X_2}ReLU(Wx)$；对于使得$ReLU(Wx)$为正的位置，<strong>线性特性依然被保持</strong>，有<br>$$<br>\sum_{x\in X}ReLU(Wx)&#x3D;ReLU(W\sum_{x\in X}x)<br>$$<br>由$\sum_{x\in X_1}x&#x3D;\sum_{x\in X_2}x$，$\sum_{x\in X_1}ReLU(Wx)&#x3D;\sum_{x\in X_2}ReLU(Wx)$。</p>
+</blockquote>
+<ul>
+<li>证明建立在<strong>不含偏置项</strong>的前提下，大意为单层感知机非常类似线性映射，因此GNN层<strong>退化为了邻居特征的简单加和</strong>；当存在偏置项且输出维度足够大时，单层感知机或许能够辨别不同的多重集；然而单层感知机不能够像多层感知机一样<strong>实现多重集函数的万能近似</strong></li>
+<li>因此，即使单层感知机在某种程度上能够将不同的图映射到不同的位置，这样的嵌入或许不能完全捕捉结构相似度，对于如线性分类器的简单分类器是<strong>难以拟合</strong>的</li>
+</ul>
+<h3 id="Structures-That-Confuse-Mean-and-Max-Pooling"><a href="#Structures-That-Confuse-Mean-and-Max-Pooling" class="headerlink" title="Structures That Confuse Mean and Max-Pooling"></a>Structures That Confuse Mean and Max-Pooling</h3><ul>
+<li>Mean和Max-Pooling操作具有<strong>置换不变性</strong>，但是他们并非多重集上的单射；下图中使用节点的颜色表征不同的节点特征，假设GNN在合并前先进行邻域聚合</li>
+<li>下图评估了三种聚合方式在同一多重集上的表达能力，求和捕捉到了<strong>整个多重集的信息</strong>，求平均捕捉到了<strong>节点类别的比例&#x2F;分布信息</strong>，求最大值<strong>忽略了节点的数量信息</strong>（直接将多重集压缩为简单集合）</li>
+</ul>
+<p><img src="http://test-bucket-12138.oss-cn-shanghai.aliyuncs.com/img/image-20220330155220548.png" alt="image-20220330155220548"></p>
+<ul>
+<li>下图列举了求平均、求最大值方法在辨别图任务中会出错的例子；(a)图表示当节点特征相同（无标签）时，求平均和求最大值均没能捕捉图的结构信息，而求和使得两图得到的结果不同（2f(a)和3f(a)）；(b) (c) 图不再赘述。</li>
+</ul>
+<p><img src="http://test-bucket-12138.oss-cn-shanghai.aliyuncs.com/img/image-20220330155247401.png" alt="image-20220330155247401"></p>
+<h3 id="Mean-Learns-Distribution"><a href="#Mean-Learns-Distribution" class="headerlink" title="Mean Learns Distribution"></a>Mean Learns Distribution</h3><ul>
+<li>为刻画<strong>求平均</strong>操作所能区分的多重集类别，考虑$X_1&#x3D;(S,m), X_2&#x3D;(S,k\cdot m)$，其中$X_1$和$X_2$具有相同的元素类别构成，但$X_2$对$X_1$中的每个元素都重复k次；所有的求平均聚合操作均针对两个多重集得到同样的embedding，因此求平均捕捉了多重集中元素的分布（比例）信息，而非具体的多重集结构。</li>
+<li>推论8：假设$\mathcal{X}$可数。存在一个函数$f:\mathcal{X}\rightarrow \mathbb{R}^n$使得$h(X)&#x3D;\frac{1}{|X|}\sum_{x\in X}f(x)$，$h(X_1)&#x3D;h(X_2)$当且仅当多重集$X_1,X_2$具有相同的分布，即假设$|X_2|\geq|X_1|$，有$X_1&#x3D;(S,m)$且$X_2&#x3D;(S,k\cdot m),k\in \mathbb{N}_{\geq1}$</li>
+</ul>
+<blockquote>
+<p>证明思路（双向论证）：</p>
+<p>不失一般性，假设$X_1$和$X_2$具有同样的分布，不妨令 $X_1&#x3D;(S,m)$且$X_2&#x3D;(S,k\cdot m), k\in \mathbb{N}<em>{\geq1}$，即二者具有相同的内在元素集合，且$X_2$中各元素的数量均为$X_1$中的k倍，于是我们有$|X_2|&#x3D;k|X_1|$且$\sum</em>{x\in X_2}f(x)&#x3D;k\cdot \sum_{x\in X_1}f(x)$。因此，<br>$$<br>\frac{1}{|X_2|}\sum_{x\in X_2}f(x)&#x3D;\frac{1}{k\cdot |X_1|}\cdot k\cdot \sum_{x\in X_1}f(x)&#x3D;\frac{1}{|X_1|}\sum_{x\in X_1}f(x)<br>$$<br>现在我们只需证明存在一个函数f使得对于分布等价的多重集$X$，$\frac{1}{|X|}\sum_{x\in X}f(x)$相等且独一无二。由于$\mathcal{X}$可数，存在从$x\in \mathcal{X}$到自然数的映射$Z:\mathcal{X}\rightarrow \mathbb{N}$。由于多重集$X$的基数有界，因此存在$N\in\mathbb{N}$使得对于所有X有$|X|&lt;N$，举例有**$f(x)&#x3D;N^{-2Z(x)}$**</p>
+</blockquote>
+<ul>
+<li>求平均聚合方法在<strong>图的统计和分布信息比实际结构更加重要</strong>的情况下表现较好。除此之外，当<strong>节点特征互不相同、很少重复</strong>时，其表达力与求和聚合方法相当。</li>
+<li>进行<strong>文章主题分类</strong>和<strong>社区检测</strong>时，节点特征丰富，邻居特征的分部信息为任务提供了强有力的支撑，因此采用求平均聚合方法的GNN取得了较好的效果。</li>
+</ul>
+<h3 id="Max-pooling-Learns-Sets-with-Distinct-Elements"><a href="#Max-pooling-Learns-Sets-with-Distinct-Elements" class="headerlink" title="Max-pooling Learns Sets with Distinct Elements"></a>Max-pooling Learns Sets with Distinct Elements</h3><ul>
+<li>求最大值聚合方法<strong>将具有相同特性的多个节点视为一个</strong>（即将多重集视为集合）；其无法捕捉结构和分布信息，但或许适合于识别<strong>代表性、主干元素相较区分网络结构、分布更重要</strong>的任务类型；其对于<strong>噪声和离群值</strong>具有鲁棒性</li>
+<li>推论9：假设$\mathcal{X}$可数。存在函数$f:\mathcal{X}\rightarrow \mathbb{R}^\infty$使得$h(X)&#x3D;max_{x\in X}f(x),h(X_1)&#x3D;h(X_2)$当且仅当$X_1,X_2$具有相同的隐含集合。</li>
+</ul>
+<blockquote>
+<p>证明思路（双向论证）：</p>
+<p>假设多重集$X_1, X_2$具有相同的隐含集合$S$，有<br>$$<br>max_{x\in X_1}{f(x)}&#x3D;max_{x\in S}{f(x)}&#x3D;max_{x\in X_2}{f(x)}<br>$$<br>现在我们只需证明存在映射f使得$max_{x\in X}{f(x)}$<strong>对于具有不同隐含集合的$X$值互不相同</strong>。由$\mathcal{X}$可数，存在从$x\in \mathcal{X}$到自然数的映射$Z:\mathcal{X}\rightarrow \mathbb{N}$。举例而言，令$f:\mathcal{X}\rightarrow \mathbb{R}^\infty$，$i&#x3D;Z(x)$则$f_i(x)&#x3D;1$，否则$f_i(x)&#x3D;0$，其中$f_i(x)$为$f(x)$坐标为i的值（<strong>one-hot编码</strong>）</p>
+</blockquote>
+<h3 id="Remoarks-on-Other-Aggregator"><a href="#Remoarks-on-Other-Aggregator" class="headerlink" title="Remoarks on Other Aggregator"></a>Remoarks on Other Aggregator</h3><ul>
+<li>作者认为该理论框架足以概括任何<strong>基于聚合</strong>的GNN的表征能力</li>
+</ul>
+<h2 id="Other-Related-Work"><a href="#Other-Related-Work" class="headerlink" title="Other Related Work"></a>Other Related Work</h2><ul>
+<li>尽管GNN在经验上取得了成功，但在<strong>数学</strong>上研究其<strong>性质</strong>的工作却相对较少</li>
+<li>之前的工作都专注于一个<strong>特定的图结构</strong>，并不容易推广到多种图结构；相比之下，作者提供了一个分析、刻画<strong>各种GNN模型</strong>表达能力的通用框架</li>
+<li>与之前的GNN框架相比，作者的图同构网络是<strong>理论驱动</strong>的，<strong>简单却强大</strong></li>
+</ul>
+<h2 id="Experiments"><a href="#Experiments" class="headerlink" title="Experiments"></a>Experiments</h2><ul>
+<li>评估与比较了GIN和其他相对较弱GNN变体的训练和测试集表现；<strong>训练集</strong>表现能够帮助我们比较不同GNN模型的<strong>表达能力</strong>，<strong>测试集</strong>表现衡量了<strong>泛化能力</strong></li>
+<li>数据集<ul>
+<li>生物信息数据集（MUTAG, PTC, NCI1, PROTEINS）</li>
+<li>社交网络数据集（COLLAB, IMDB-BINARY, IMDB-MULTI, REDDIT-BINARY, REDDIT-MULTI5K）</li>
+</ul>
+</li>
+<li>目标不是让模型依赖于输入节点的标签，而是<strong>从网络结构中获取主要信息</strong><ul>
+<li>令REDDIT数据集的<strong>所有节点特征相同</strong>；其他社交网络数据集中使用<strong>节点度的one-hot编码</strong>作为节点特征</li>
+</ul>
+</li>
+<li>模型和配置<ul>
+<li>GIN-ε表示使用<strong>梯度下降</strong>学习ε参数；GIN-0表示将ε<strong>固定为0</strong></li>
+<li>GIN-0不仅和GIN-ε具有相同的训练集拟合能力，同时具有很强的<strong>泛化能力</strong>（测试集准确率稍好于GIN-ε）</li>
+<li>其他GNN变体按照“聚合方法-感知器”的方式命名（忽略微小的模型改动则<strong>GCN: mean-1-layer</strong>, <strong>GraphSAGE: max-1-layer</strong>）</li>
+<li>所有GIN及GNN变体模型采用同样的整图读取函数<ul>
+<li>sum用于生物信息数据集，mean用于社交网络数据集</li>
+</ul>
+</li>
+<li>10折交叉验证；5层GNN；MLP为2层；Adam优化器；0.01初始学习率，每50epo减少一半；超参配置……</li>
+<li>为对比，WL子树核同样被纳入测试，<strong>迭代次数被设置为4</strong>，<strong>对应5层GNN</strong></li>
+</ul>
+</li>
+<li>基线：<strong>WL子树核</strong>；state-of-the-art深度学习框架；匿名随机游走嵌入</li>
+</ul>
+<h3 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h3><ul>
+<li>训练集表现<ul>
+<li><strong>表达能力越强，训练集准确率越高</strong></li>
+<li>理论最强GNN（GIN）介乎完美的拟合了所有的训练集；其他GNN在许多数据集上严重<strong>欠拟合</strong>；<strong>MLP&gt;1-layer perceptrons</strong>, <strong>sum&gt;mean&#x2F;max</strong></li>
+<li><strong>所有GNN模型均未超过WL子树核</strong>，因为GNN的辨别能力相较WL测试更低；但WL子树核不能够学习如何<strong>结合节点特征</strong>（在预测任务中较为重要）</li>
+</ul>
+</li>
+</ul>
+<p><img src="http://test-bucket-12138.oss-cn-shanghai.aliyuncs.com/img/image-20220330201022397.png" alt="image-20220330201022397"></p>
+<ul>
+<li>测试集表现<ul>
+<li>有较强表达能力的GNN能够精确捕捉图结构，因此具有较好的<strong>泛化能力</strong></li>
+<li>**GIN(-0)**在9个数据集中超越了所有的GNN模型；尤其在社交网络数据集上，使用sum聚合方式捕捉图结构明显优于其他模型；即使将节点度（的one-hot）作为输入特征，采用平均聚合方式的效果也远差于采用求和聚合方式的GNN</li>
+<li>GIN-0表现优于GIN-ε，可能是因为模型较为<strong>简单</strong></li>
+</ul>
+</li>
+</ul>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><ul>
+<li>本文中作者为<strong>推理GNN的表达能力</strong>建立了<strong>理论基础</strong>，并证明了流行的GNN变体的表达能力的<strong>严格上界</strong></li>
+<li>作者还在<strong>邻域聚合框架</strong>下设计了一个可证明的具有<strong>最大能力的GNN</strong></li>
+</ul>
+</div></article></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/avatar.png" alt="Ted Xu"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Ted Xu</p><p class="is-size-6 is-block">A vegetable dog aspired to be a data scientist.</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Shanghai, China</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">6</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">5</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">4</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/Ted-0711" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/Ted-0711"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="https://www.facebook.com/profile.php?id=100010513717553"><i class="fab fa-facebook"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Graph-Machine-Learning/"><span class="level-start"><span class="level-item">Graph Machine Learning</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Lab-FSR/"><span class="level-start"><span class="level-item">Lab - FSR</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Lab-Graph/"><span class="level-start"><span class="level-item">Lab - Graph</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Skills-Git/"><span class="level-start"><span class="level-item">Skills - Git</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Skills-Pytorch/"><span class="level-start"><span class="level-item">Skills - Pytorch</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-04-11T13:31:26.000Z">2022-04-11</time></p><p class="title"><a href="/2022/04/11/Graph-Machine-Learning-CS224W/">Graph Machine Learning (CS224W)</a></p><p class="categories"><a href="/categories/Graph-Machine-Learning/">Graph Machine Learning</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-03-29T18:13:00.000Z">2022-03-30</time></p><p class="title"><a href="/2022/03/30/How-Powerful-are-Graph-Neural-Networks/">How Powerful are Graph Neural Networks?</a></p><p class="categories"><a href="/categories/Lab-Graph/">Lab - Graph</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-03-22T08:53:37.000Z">2022-03-22</time></p><p class="title"><a href="/2022/03/22/Learn-Pytorch/">Learn Pytorch</a></p><p class="categories"><a href="/categories/Skills-Pytorch/">Skills - Pytorch</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-03-17T07:23:29.000Z">2022-03-17</time></p><p class="title"><a href="/2022/03/17/Learn-Git/">Learn Git</a></p><p class="categories"><a href="/categories/Skills-Git/">Skills - Git</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-03-13T11:54:54.000Z">2022-03-13</time></p><p class="title"><a href="/2022/03/13/%E8%B0%83%E7%A0%94-%E7%B3%BB%E7%BB%9F%E6%80%A7%E9%87%91%E8%9E%8D%E9%A3%8E%E9%99%A9%E8%AE%A1%E7%AE%97%E6%A8%A1%E5%9E%8B/">调研-系统性金融风险计算模型</a></p><p class="categories"><a href="/categories/Lab-FSR/">Lab - FSR</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2022/04/"><span class="level-start"><span class="level-item">四月 2022</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/03/"><span class="level-start"><span class="level-item">三月 2022</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Financial-System-Risk/"><span class="tag">Financial System Risk</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Graph-Machine-Learning/"><span class="tag">Graph Machine Learning</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Graph-Neural-Networks/"><span class="tag">Graph Neural Networks</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Skills/"><span class="tag">Skills</span><span class="tag">2</span></a></div></div></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/">Ted Xu&#039;s Blog</a><p class="is-size-7"><span>&copy; 2022 Ted Xu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
