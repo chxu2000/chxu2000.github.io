@@ -140,14 +140,14 @@
   </url>
   
   <url>
-    <loc>http://example.com/tags/Financial-System-Risk/</loc>
+    <loc>http://example.com/tags/Pytorch/</loc>
     <lastmod>2022-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/Pytorch/</loc>
+    <loc>http://example.com/tags/Financial-System-Risk/</loc>
     <lastmod>2022-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
