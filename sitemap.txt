@@ -1,4 +1,4 @@
-http://example.com/2022/06/16/Uncompress-Commands/
+http://example.com/2022/06/16/Compress-Commands/
 http://example.com/2022/03/17/Learn-Git/
 http://example.com/2022/05/25/SSH-About/
 http://example.com/about/index.html
@@ -13,12 +13,12 @@ http://example.com/categories/index.html
 http://example.com/tags/index.html
 http://example.com/2022/03/13/hello-world/
 http://example.com/
+http://example.com/tags/Linux/
 http://example.com/tags/Graph-Machine-Learning/
 http://example.com/tags/Graph-Neural-Networks/
 http://example.com/tags/Git/
 http://example.com/tags/SSH/
 http://example.com/tags/Pytorch/
-http://example.com/tags/Linux/
 http://example.com/tags/Financial-System-Risk/
-http://example.com/categories/Lab/
 http://example.com/categories/Skills/
+http://example.com/categories/Lab/
