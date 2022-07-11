@@ -18,9 +18,9 @@ http://example.com/tags/Linux/
 http://example.com/tags/Graph-Machine-Learning/
 http://example.com/tags/Graph-DB/
 http://example.com/tags/Graph-Neural-Networks/
-http://example.com/tags/SSH/
 http://example.com/tags/Git/
 http://example.com/tags/Pytorch/
+http://example.com/tags/SSH/
 http://example.com/tags/Financial-System-Risk/
 http://example.com/categories/Skills/
 http://example.com/categories/Lab/

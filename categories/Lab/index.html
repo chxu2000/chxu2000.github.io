@@ -33,11 +33,11 @@
       switchTab();
       window.addEventListener('hashchange', switchTab, false);
   })();
-  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.0.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/">Ted Xu&#039;s Blog</a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/categories">分类</a></li><li class="is-active"><a href="#" aria-current="page">Lab</a></li></ul></nav></div></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-07-04T14:02:42.000Z" title="2022/7/4 22:02:42">2022-07-04</time>发表</span><span class="level-item"><time dateTime="2022-07-08T00:53:28.810Z" title="2022/7/8 08:53:28">2022-07-08</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Lab/">Lab</a></span><span class="level-item">19 分钟读完 (大约2860个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/07/04/LSched-A-Workload-Aware-Learned-Query-Scheduler-for-Analytical-Database-Systems/">LSched: A Workload-Aware Learned Query Scheduler for Analytical Database Systems</a></h1><div class="content"><h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><ul>
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.0.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/">Ted Xu&#039;s Blog</a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/categories">分类</a></li><li class="is-active"><a href="#" aria-current="page">Lab</a></li></ul></nav></div></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-07-04T14:02:42.000Z" title="2022/7/4 22:02:42">2022-07-04</time>发表</span><span class="level-item"><time dateTime="2022-07-08T01:44:30.857Z" title="2022/7/8 09:44:30">2022-07-08</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Lab/">Lab</a></span><span class="level-item">19 分钟读完 (大约2864个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/07/04/LSched-A-Workload-Aware-Learned-Query-Scheduler-for-Analytical-Database-Systems/">LSched: A Workload-Aware Learned Query Scheduler for Analytical Database Systems</a></h1><div class="content"><h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><ul>
 <li>查询调度是分析数据库系统的一项关键任务，它会极大地影响查询延迟。</li>
 <li>最近的一项试验提出使用强化学习来自动学习端到端调度策略。然而，此类试验无法考虑数据库特定的特征（例如，操作员类型、流水线），因此对于分析数据库系统来说效率不高。</li>
-<li>在本文中，我们试图填补这一空白，并介绍了LSched（学习调度程序），一种用于内存分析数据库系统的完全学习的工作负载感知查询调度程序。</li>
-<li>LSched为动态分析工作负载提供了高效的查询间和查询内调度（即，不同的查询可以随时到达&#x2F;离开）。</li>
+<li>在本文中，我们试图填补这一空白，并介绍了 LSched（学习调度程序），一种用于内存分析数据库系统的完全学习的工作负载感知查询调度程序。</li>
+<li>LSched 为动态分析工作负载提供了高效的查询间和查询内调度（即，不同的查询可以随时到达&#x2F;离开）。</li>
 </ul>
 <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><ul>
 <li><p>分析查询处理系统中的任务调度可以对查询延迟和查询吞吐量产生深远的影响。</p>
@@ -52,41 +52,41 @@
 </li>
 <li><p>启发式倾向于简化假设，众所周知，很难将其扩展到考虑更复杂的系统行为。</p>
 </li>
-<li><p>Decima提出使用强化学习为输入工作负载自动构建特定的端到端调度策略，但无法考虑数据库特定的特性，例如查询结构、不同的运算符（例如聚合与连接）以及流水线机会。例如，Decima假设任何查询都是任务的DAG，其中每个任务都是一个黑匣子，除非其所有父任务都已完成（即不支持流水线），否则无法对其进行调度。然而，在关系查询的情况下，至关重要的是将每个任务视为一个白盒，并根据其细节以及与其他任务的关系优化调度策略。</p>
+<li><p>Decima 提出使用强化学习为输入工作负载自动构建特定的端到端调度策略，但无法考虑数据库特定的特性，例如查询结构、不同的运算符（例如聚合与连接）以及流水线机会。例如，Decima 假设任何查询都是任务的DAG，其中每个任务都是一个黑匣子，除非其所有父任务都已完成（即不支持流水线），否则无法对其进行调度。然而，在关系查询的情况下，至关重要的是将每个任务视为一个白盒，并根据其细节以及与其他任务的关系优化调度策略。</p>
 </li>
 <li><p>典型关键路径流水线、Decima、与学习调度器对比</p>
 <p><img src="http://test-bucket-12138.oss-cn-shanghai.aliyuncs.com/img/image-20220706224512398.png" alt="image-20220706224512398"></p>
 </li>
 <li><p>利用机器学习分析工作负载中的调度查询，此类试验倾向于使用ML来预测查询或任务延迟，以做出更好的决策，而不是试图学习整个调度策略。</p>
 </li>
-<li><p>Quickstep使用线性回归根据给定查询的执行历史预测未来工单的执行时间。这种预测用于控制来自运行启发式调度策略（例如HPF）的资源分配决策。</p>
+<li><p>Quickstep 使用线性回归根据给定查询的执行历史预测未来工单的执行时间。这种预测用于控制来自运行启发式调度策略（例如 HPF）的资源分配决策。</p>
 </li>
-<li><p>SelfTune采用了约束优化技术来调整其固定调度策略的超参数，以适应输入工作负载。</p>
+<li><p>SelfTune 采用了约束优化技术来调整其固定调度策略的超参数，以适应输入工作负载。</p>
 </li>
-<li><p>另一项工作使用RL自动学习执行不同查询的顺序，以最大限度地利用缓冲池项（即提高命中率）。</p>
+<li><p>另一项工作使用 RL 自动学习执行不同查询的顺序，以最大限度地利用缓冲池项（即提高命中率）。</p>
 </li>
 <li><p>然而，仅根据缓冲池命中数优化调度，而不考虑其他调度因素（例如，每个查询的并行度）和执行环境的当前状态，并不一定会产生更好的多查询执行计划。 </p>
 </li>
-<li><p>在本文中，我们介绍了LSched（学习调度器），一种用于内存分析数据库系统的基于完全RL的学习工作负载感知查询调度器。</p>
+<li><p>在本文中，我们介绍了 LSched（学习调度器），一种用于内存分析数据库系统的基于完全 RL 的学习工作负载感知查询调度器。</p>
 </li>
-<li><p>LSched为动态分析工作负载提供了高效的查询间和查询内调度（即，不同的查询可以随时到达和离开）。</p>
+<li><p>LSched 为动态分析工作负载提供了高效的查询间和查询内调度（即，不同的查询可以随时到达和离开）。</p>
 </li>
-<li><p>给定过去执行的一组查询计划（例如工作负载日志），LSched自动学习如何在每个调度事件中做出以下决策：（1）要执行的查询子集，（2）要执行的查询中的运算符子集，以及（3）要分配给这些运算符的资源量（例如线程）。</p>
+<li><p>给定过去执行的一组查询计划（例如工作负载日志），LSched 自动学习如何在每个调度事件中做出以下决策：（1）要执行的查询子集，（2）要执行的查询中的运算符子集，以及（3）要分配给这些运算符的资源量（例如线程）。</p>
 </li>
-<li><p>LSched根据用户定义的高级策略目标（例如，最小化用户感知的延迟），针对特定输入工作负载优化这些调度决策。 </p>
+<li><p>LSched 根据用户定义的高级策略目标（例如，最小化用户感知的延迟），针对特定输入工作负载优化这些调度决策。 </p>
 </li>
-<li><p>LSched的工作原理如下：它将需要调度的查询作为输入（查询可以批量或流式到达），并使用典型的分析DBMS（例如Quickstep）为其生成查询计划（即算子的DAG）。然后，将该查询计划馈送给LSched的调度代理，该调度代理由查询编码器和调度预测器组成，以预测用于执行该查询的调度决策序列以及当前系统中已经存在的其他查询。每个调度决策都由调度事件触发（例如，新查询的到达或运算符的执行完成），并设计为在运行整个调度决策序列（即长期执行计划）后最小化所有现有查询的预期延迟。随着时间的推移，LSched发现更好的调度决策，LSched的调度预测器会改进并产生更好的执行计划。此改进过程将继续，直到预测值收敛。</p>
+<li><p>LSched 的工作原理如下：它将需要调度的查询作为输入（查询可以批量或流式到达），并使用典型的分析 DBMS（例如 Quickstep）为其生成查询计划（即算子的 DAG）。然后，将该查询计划馈送给 LSched 的调度代理，该调度代理由查询编码器和调度预测器组成，以预测用于执行该查询的调度决策序列以及当前系统中已经存在的其他查询。每个调度决策都由调度事件触发（例如，新查询的到达或运算符的执行完成），并设计为在运行整个调度决策序列（即长期执行计划）后最小化所有现有查询的预期延迟。随着时间的推移，LSched 发现更好的调度决策，LSched 的调度预测器会改进并产生更好的执行计划。此改进过程将继续，直到预测值收敛。</p>
 </li>
-<li><p>总之，LSched有以下贡献，克服了Decima的局限性，并概述了如何在数据库上下文中学习端到端查询调度：</p>
+<li><p>总之，LSched 有以下贡献，克服了 Decima 的局限性，并概述了如何在数据库上下文中学习端到端查询调度：</p>
 <ul>
 <li>利用高效的物理计划特性：非黑盒</li>
-<li>高效准确的查询编码：自定义树卷积+GAT</li>
+<li>高效准确的查询编码：自定义树卷积 + GAT</li>
 <li>灵活的调度策略：自动控制操作符流水线</li>
 <li>平均和尾部延迟之间的平衡：新的激励函数</li>
 <li>高效的训练时间：迁移学习</li>
 </ul>
 </li>
-<li><p>LSched可以与任何基于内存块的数据库系统集成。</p>
+<li><p>LSched 可以与任何基于内存块的数据库系统集成。</p>
 </li>
 </ul>
 <h2 id="前置知识：QuickStep"><a href="#前置知识：QuickStep" class="headerlink" title="前置知识：QuickStep"></a>前置知识：QuickStep</h2><ul>
@@ -102,8 +102,8 @@
 </ul>
 <h2 id="调度器概览"><a href="#调度器概览" class="headerlink" title="调度器概览"></a>调度器概览</h2><p><img src="http://test-bucket-12138.oss-cn-shanghai.aliyuncs.com/img/image-20220707101410500.png" alt="image-20220707101410500"></p>
 <h2 id="查询编码器"><a href="#查询编码器" class="headerlink" title="查询编码器"></a>查询编码器</h2><h3 id="物理计划特征提取"><a href="#物理计划特征提取" class="headerlink" title="物理计划特征提取"></a>物理计划特征提取</h3><ul>
-<li>LSCHED的主要目的是在安排并发查询时捕获查询执行环境。</li>
-<li>LSCHED从运行查询的物理计划中提取了一组有用的特征。</li>
+<li>LSCHED 的主要目的是在安排并发查询时捕获查询执行环境。</li>
+<li>LSCHED 从运行查询的物理计划中提取了一组有用的特征。</li>
 <li>操作符特征（OPF）<ul>
 <li>操作符类型</li>
 <li>操作符联结度</li>
@@ -132,16 +132,16 @@
 <li>动态特征：每当有调度事件时重新计算，基于执行监视器报告的执行统计数据</li>
 </ul>
 <h3 id="单查询编码"><a href="#单查询编码" class="headerlink" title="单查询编码"></a>单查询编码</h3><ul>
-<li><p>Decima使用GCN的缺陷</p>
+<li><p>Decima 使用 GCN 的缺陷</p>
 <ul>
 <li>Over-smoothing</li>
 <li>不同节点重要性相同</li>
 </ul>
 </li>
-<li><p>LSched解决方案：树卷积与GAT结合</p>
+<li><p>LSched 解决方案：树卷积与 GAT 结合</p>
 <ul>
 <li>树卷积捕捉分层调度与执行模式</li>
-<li>GAT调优树卷积输出</li>
+<li>GAT 调优树卷积输出</li>
 </ul>
 </li>
 </ul>
@@ -153,7 +153,7 @@
 </li>
 <li><p>质量比较</p>
 <ul>
-<li>TCN过滤器采用不同的权重向量，可准确捕获模式中的不同亲子关系</li>
+<li>TCN 过滤器采用不同的权重向量，可准确捕获模式中的不同亲子关系</li>
 <li>在序列消息传递中，在节点上发生了过度平滑的，可以减少其嵌入值</li>
 </ul>
 </li>
@@ -164,7 +164,7 @@
 <h4 id="GAT"><a href="#GAT" class="headerlink" title="GAT"></a>GAT</h4><ul>
 <li><p>一个节点的执行动作可能受其孙节点之一影响更大</p>
 </li>
-<li><p>在GCN和树卷积中，卷积执行各向同性聚集，其中每个邻居节点在中央节点的表示（即嵌入）中同等贡献。</p>
+<li><p>在 GCN 和树卷积中，卷积执行各向同性聚集，其中每个邻居节点在中央节点的表示（即嵌入）中同等贡献。</p>
 </li>
 <li><p><img src="http://test-bucket-12138.oss-cn-shanghai.aliyuncs.com/img/image-20220708011912037.png" alt="image-20220708011912037"></p>
 </li>
@@ -180,9 +180,9 @@
 <li><p>查询编码器架构</p>
 <p><img src="http://test-bucket-12138.oss-cn-shanghai.aliyuncs.com/img/image-20220708013028035.png" alt="image-20220708013028035"></p>
 </li>
-<li><p>PQE嵌入是通过摘要神经网络为每个查询创建的，该摘要神经网络连接了从查询节点和边缘到虚拟摘要节点的错误定向边缘（没有特征）。</p>
+<li><p>PQE 嵌入是通过摘要神经网络为每个查询创建的，该摘要神经网络连接了从查询节点和边缘到虚拟摘要节点的错误定向边缘（没有特征）。</p>
 </li>
-<li><p>通过另一个将这些查询的PQE摘要连接到单个全局摘要节点（即，PQE摘要成为此全局节点的子女）的另一个摘要神经网络目前为所有运行查询创建AQE嵌入。</p>
+<li><p>通过另一个将这些查询的 PQE 摘要连接到单个全局摘要节点（即，PQE 摘要成为此全局节点的子女）的另一个摘要神经网络目前为所有运行查询创建 AQE 嵌入。</p>
 </li>
 </ul>
 <h2 id="调度预测器"><a href="#调度预测器" class="headerlink" title="调度预测器"></a>调度预测器</h2><ul>
@@ -192,14 +192,14 @@
 <li>略。</li>
 </ul>
 <h3 id="调度触发器"><a href="#调度触发器" class="headerlink" title="调度触发器"></a>调度触发器</h3><ul>
-<li>为了在调度开销和收益之间取得平衡，我们设计了LSched，使其调度预测器仅在线程和&#x2F;或查询的重大事件上触发（我们将其称为调度事件）。</li>
+<li>为了在调度开销和收益之间取得平衡，我们设计了 LSched，使其调度预测器仅在线程和&#x2F;或查询的重大事件上触发（我们将其称为调度事件）。</li>
 </ul>
 <h3 id="调度决策"><a href="#调度决策" class="headerlink" title="调度决策"></a>调度决策</h3><ul>
 <li><p>调度预测器旨在在任何调度事件中学习和执行以下三个调度决策：</p>
 <ol>
-<li>哪些操作员从哪个操作符开始执行以及从哪些查询中进行查询</li>
-<li>从每个执行根开始，正确的串行顺序</li>
-<li>每个运行查询的适当并行度</li>
+<li>哪些操作员从哪个操作符开始执行以及从哪些查询中进行查询；</li>
+<li>从每个执行根开始，正确的串行顺序；</li>
+<li>每个运行查询的适当并行度。</li>
 </ol>
 </li>
 <li><p>架构</p>
@@ -207,10 +207,10 @@
 </li>
 </ul>
 <h4 id="执行根预测器"><a href="#执行根预测器" class="headerlink" title="执行根预测器"></a>执行根预测器</h4><ul>
-<li>LSCHED认为它是潜在流水线的根，然后将该根传递给流水线度预测变量，以找出该流水线的正确程度</li>
+<li>LSCHED 认为它是潜在流水线的根，然后将该根传递给流水线度预测变量，以找出该流水线的正确程度。</li>
 </ul>
 <h4 id="流水线度预测器"><a href="#流水线度预测器" class="headerlink" title="流水线度预测器"></a>流水线度预测器</h4><ul>
-<li>预测流水线度是与Decima的主要区别，其不能同时安排两个或更多流水线的操作符，以便在同一线程上运行。</li>
+<li>预测流水线度是与 Decima 的主要区别，其不能同时安排两个或更多流水线的操作符，以便在同一线程上运行。</li>
 </ul>
 <h4 id="并行度预测器"><a href="#并行度预测器" class="headerlink" title="并行度预测器"></a>并行度预测器</h4><ul>
 <li>为每个查询计算选择1到最大数量的线程数量的可用线程的概率。</li>
@@ -628,7 +628,7 @@
 </li>
 </ul>
 <img src="http://test-bucket-12138.oss-cn-shanghai.aliyuncs.com/img/image-20220313194849567.png" alt="image-20220313194849567" style="zoom:40%;" />
-</div></article></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="/img/portrait.jpg" alt="Ted Xu"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Ted Xu</p><p class="is-size-6 is-block">A vegetable dog aspired to be a data scientist.</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Shanghai, China</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">9</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">2</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">8</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/Ted-0711" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/Ted-0711"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="https://www.facebook.com/profile.php?id=100010513717553"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com/xuchenh70581229"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="WeChat" href="/img/wechat.jpg"><i class="fab fa-weixin"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="QQ" href="/img/qq.jpg"><i class="fab fa-qq"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Lab/"><span class="level-start"><span class="level-item">Lab</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/Skills/"><span class="level-start"><span class="level-item">Skills</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-07-04T14:02:42.000Z">2022-07-04</time></p><p class="title"><a href="/2022/07/04/LSched-A-Workload-Aware-Learned-Query-Scheduler-for-Analytical-Database-Systems/">LSched: A Workload-Aware Learned Query Scheduler for Analytical Database Systems</a></p><p class="categories"><a href="/categories/Lab/">Lab</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-06-16T15:02:12.000Z">2022-06-16</time></p><p class="title"><a href="/2022/06/16/Compress-Commands/">Compress &amp; Uncompress Commands</a></p><p class="categories"><a href="/categories/Skills/">Skills</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-05-25T13:52:44.000Z">2022-05-25</time></p><p class="title"><a href="/2022/05/25/SSH-About/">SSH About</a></p><p class="categories"><a href="/categories/Skills/">Skills</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-04-11T13:31:26.000Z">2022-04-11</time></p><p class="title"><a href="/2022/04/11/Graph-Machine-Learning-CS224W/">Graph Machine Learning (CS224W)</a></p><p class="categories"><a href="/categories/Lab/">Lab</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-03-29T18:13:00.000Z">2022-03-30</time></p><p class="title"><a href="/2022/03/30/How-Powerful-are-Graph-Neural-Networks/">How Powerful are Graph Neural Networks?</a></p><p class="categories"><a href="/categories/Lab/">Lab</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2022/07/"><span class="level-start"><span class="level-item">七月 2022</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/06/"><span class="level-start"><span class="level-item">六月 2022</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/05/"><span class="level-start"><span class="level-item">五月 2022</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/04/"><span class="level-start"><span class="level-item">四月 2022</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/03/"><span class="level-start"><span class="level-item">三月 2022</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Financial-System-Risk/"><span class="tag">Financial System Risk</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Git/"><span class="tag">Git</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Graph-DB/"><span class="tag">Graph DB</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Graph-Machine-Learning/"><span class="tag">Graph Machine Learning</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Graph-Neural-Networks/"><span class="tag">Graph Neural Networks</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Linux/"><span class="tag">Linux</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Pytorch/"><span class="tag">Pytorch</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/SSH/"><span class="tag">SSH</span><span class="tag">1</span></a></div></div></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/">Ted Xu&#039;s Blog</a><p class="is-size-7"><span>&copy; 2022 Ted Xu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a><br><span id="busuanzi_container_site_uv">共<span id="busuanzi_value_site_uv">0</span>个访客</span></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+</div></article></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="/img/portrait.jpg" alt="Ted Xu"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Ted Xu</p><p class="is-size-6 is-block">Across the Great Wall we can reach every corner in the world.</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Shanghai, China</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">9</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">2</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">8</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/Ted-0711" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/Ted-0711"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="https://www.facebook.com/profile.php?id=100010513717553"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com/xuchenh70581229"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="WeChat" href="/img/wechat.jpg"><i class="fab fa-weixin"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="QQ" href="/img/qq.jpg"><i class="fab fa-qq"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Lab/"><span class="level-start"><span class="level-item">Lab</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/Skills/"><span class="level-start"><span class="level-item">Skills</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-07-04T14:02:42.000Z">2022-07-04</time></p><p class="title"><a href="/2022/07/04/LSched-A-Workload-Aware-Learned-Query-Scheduler-for-Analytical-Database-Systems/">LSched: A Workload-Aware Learned Query Scheduler for Analytical Database Systems</a></p><p class="categories"><a href="/categories/Lab/">Lab</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-06-16T15:02:12.000Z">2022-06-16</time></p><p class="title"><a href="/2022/06/16/Compress-Commands/">Compress &amp; Uncompress Commands</a></p><p class="categories"><a href="/categories/Skills/">Skills</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-05-25T13:52:44.000Z">2022-05-25</time></p><p class="title"><a href="/2022/05/25/SSH-About/">SSH About</a></p><p class="categories"><a href="/categories/Skills/">Skills</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-04-11T13:31:26.000Z">2022-04-11</time></p><p class="title"><a href="/2022/04/11/Graph-Machine-Learning-CS224W/">Graph Machine Learning (CS224W)</a></p><p class="categories"><a href="/categories/Lab/">Lab</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-03-29T18:13:00.000Z">2022-03-30</time></p><p class="title"><a href="/2022/03/30/How-Powerful-are-Graph-Neural-Networks/">How Powerful are Graph Neural Networks?</a></p><p class="categories"><a href="/categories/Lab/">Lab</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2022/07/"><span class="level-start"><span class="level-item">七月 2022</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/06/"><span class="level-start"><span class="level-item">六月 2022</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/05/"><span class="level-start"><span class="level-item">五月 2022</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/04/"><span class="level-start"><span class="level-item">四月 2022</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/03/"><span class="level-start"><span class="level-item">三月 2022</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Financial-System-Risk/"><span class="tag">Financial System Risk</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Git/"><span class="tag">Git</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Graph-DB/"><span class="tag">Graph DB</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Graph-Machine-Learning/"><span class="tag">Graph Machine Learning</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Graph-Neural-Networks/"><span class="tag">Graph Neural Networks</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Linux/"><span class="tag">Linux</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Pytorch/"><span class="tag">Pytorch</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/SSH/"><span class="tag">SSH</span><span class="tag">1</span></a></div></div></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/">Ted Xu&#039;s Blog</a><p class="is-size-7"><span>&copy; 2022 Ted Xu</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a><br><span id="busuanzi_container_site_uv">共<span id="busuanzi_value_site_uv">0</span>个访客</span></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
             article: {
                 highlight: {
                     clipboard: true,
