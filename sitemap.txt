@@ -1,3 +1,4 @@
+http://example.com/2022/10/17/PostgreSQL-About/
 http://example.com/2022/10/16/Learning-Scheduling-Algorithms-for-Data-Processing-Clusters/
 http://example.com/2022/07/04/LSched-A-Workload-Aware-Learned-Query-Scheduler-for-Analytical-Database-Systems/
 http://example.com/2022/06/16/Compress-Commands/
@@ -18,11 +19,12 @@ http://example.com/
 http://example.com/tags/Linux/
 http://example.com/tags/Graph-Machine-Learning/
 http://example.com/tags/Graph-Neural-Networks/
-http://example.com/tags/Git/
 http://example.com/tags/Graph-DB/
-http://example.com/tags/Pytorch/
+http://example.com/tags/Git/
 http://example.com/tags/Scheduling-Algorithms/
 http://example.com/tags/Data-Processing-Clusters/
+http://example.com/tags/Pytorch/
+http://example.com/tags/PostgreSQL/
 http://example.com/tags/SSH/
 http://example.com/tags/Financial-System-Risk/
 http://example.com/categories/Skills/
