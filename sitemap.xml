@@ -2,7 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://example.com/about/index.html</loc>
+    <loc>https://chxu2000.github.io/2022/03/17/Learn-Git/</loc>
+    
+    <lastmod>2022-11-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://chxu2000.github.io/about/index.html</loc>
     
     <lastmod>2022-11-15</lastmod>
     
@@ -11,7 +20,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/2022/10/17/OpenLooKeng-About/</loc>
+    <loc>https://chxu2000.github.io/2022/10/17/OpenLooKeng-About/</loc>
     
     <lastmod>2022-10-17</lastmod>
     
@@ -20,7 +29,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/2022/10/17/PostgreSQL-About/</loc>
+    <loc>https://chxu2000.github.io/2022/10/17/PostgreSQL-About/</loc>
     
     <lastmod>2022-10-17</lastmod>
     
@@ -29,7 +38,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/2022/10/16/Learning-Scheduling-Algorithms-for-Data-Processing-Clusters/</loc>
+    <loc>https://chxu2000.github.io/2022/10/16/Learning-Scheduling-Algorithms-for-Data-Processing-Clusters/</loc>
     
     <lastmod>2022-10-16</lastmod>
     
@@ -38,7 +47,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/2022/07/04/LSched-A-Workload-Aware-Learned-Query-Scheduler-for-Analytical-Database-Systems/</loc>
+    <loc>https://chxu2000.github.io/2022/07/04/LSched-A-Workload-Aware-Learned-Query-Scheduler-for-Analytical-Database-Systems/</loc>
     
     <lastmod>2022-07-08</lastmod>
     
@@ -47,7 +56,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/2022/06/16/Compress-Commands/</loc>
+    <loc>https://chxu2000.github.io/2022/06/16/Compress-Commands/</loc>
     
     <lastmod>2022-06-16</lastmod>
     
@@ -56,16 +65,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/2022/03/17/Learn-Git/</loc>
-    
-    <lastmod>2022-06-08</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/2022/05/25/SSH-About/</loc>
+    <loc>https://chxu2000.github.io/2022/05/25/SSH-About/</loc>
     
     <lastmod>2022-05-25</lastmod>
     
@@ -74,7 +74,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/2022/04/11/Graph-Machine-Learning-CS224W/</loc>
+    <loc>https://chxu2000.github.io/2022/04/11/Graph-Machine-Learning-CS224W/</loc>
     
     <lastmod>2022-04-17</lastmod>
     
@@ -83,7 +83,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/2022/03/22/Learn-Pytorch/</loc>
+    <loc>https://chxu2000.github.io/2022/03/22/Learn-Pytorch/</loc>
     
     <lastmod>2022-04-12</lastmod>
     
@@ -92,7 +92,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/2022/03/30/How-Powerful-are-Graph-Neural-Networks/</loc>
+    <loc>https://chxu2000.github.io/2022/03/30/How-Powerful-are-Graph-Neural-Networks/</loc>
     
     <lastmod>2022-04-12</lastmod>
     
@@ -101,7 +101,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/2022/03/13/%E8%B0%83%E7%A0%94-%E7%B3%BB%E7%BB%9F%E6%80%A7%E9%87%91%E8%9E%8D%E9%A3%8E%E9%99%A9%E8%AE%A1%E7%AE%97%E6%A8%A1%E5%9E%8B/</loc>
+    <loc>https://chxu2000.github.io/2022/03/13/%E8%B0%83%E7%A0%94-%E7%B3%BB%E7%BB%9F%E6%80%A7%E9%87%91%E8%9E%8D%E9%A3%8E%E9%99%A9%E8%AE%A1%E7%AE%97%E6%A8%A1%E5%9E%8B/</loc>
     
     <lastmod>2022-04-12</lastmod>
     
@@ -110,7 +110,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/404/index.html</loc>
+    <loc>https://chxu2000.github.io/404/index.html</loc>
     
     <lastmod>2022-03-13</lastmod>
     
@@ -119,7 +119,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/schedule/index.html</loc>
+    <loc>https://chxu2000.github.io/schedule/index.html</loc>
     
     <lastmod>2022-03-13</lastmod>
     
@@ -128,7 +128,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/archives/index.html</loc>
+    <loc>https://chxu2000.github.io/archives/index.html</loc>
     
     <lastmod>2022-03-13</lastmod>
     
@@ -137,7 +137,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/index.html</loc>
+    <loc>https://chxu2000.github.io/categories/index.html</loc>
     
     <lastmod>2022-03-13</lastmod>
     
@@ -146,7 +146,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/tags/index.html</loc>
+    <loc>https://chxu2000.github.io/tags/index.html</loc>
     
     <lastmod>2022-03-13</lastmod>
     
@@ -155,7 +155,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/2022/03/13/hello-world/</loc>
+    <loc>https://chxu2000.github.io/2022/03/13/hello-world/</loc>
     
     <lastmod>1985-10-26</lastmod>
     
@@ -165,93 +165,93 @@
   
 
   <url>
-    <loc>http://example.com/</loc>
-    <lastmod>2022-11-15</lastmod>
+    <loc>https://chxu2000.github.io/</loc>
+    <lastmod>2022-11-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>http://example.com/tags/Linux/</loc>
-    <lastmod>2022-11-15</lastmod>
+    <loc>https://chxu2000.github.io/tags/Linux/</loc>
+    <lastmod>2022-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/Graph-Machine-Learning/</loc>
-    <lastmod>2022-11-15</lastmod>
+    <loc>https://chxu2000.github.io/tags/Graph-Machine-Learning/</loc>
+    <lastmod>2022-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/Graph-Neural-Networks/</loc>
-    <lastmod>2022-11-15</lastmod>
+    <loc>https://chxu2000.github.io/tags/Graph-DB/</loc>
+    <lastmod>2022-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/Git/</loc>
-    <lastmod>2022-11-15</lastmod>
+    <loc>https://chxu2000.github.io/tags/Graph-Neural-Networks/</loc>
+    <lastmod>2022-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/Graph-DB/</loc>
-    <lastmod>2022-11-15</lastmod>
+    <loc>https://chxu2000.github.io/tags/Git/</loc>
+    <lastmod>2022-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/Pytorch/</loc>
-    <lastmod>2022-11-15</lastmod>
+    <loc>https://chxu2000.github.io/tags/Pytorch/</loc>
+    <lastmod>2022-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/Scheduling-Algorithms/</loc>
-    <lastmod>2022-11-15</lastmod>
+    <loc>https://chxu2000.github.io/tags/Scheduling-Algorithms/</loc>
+    <lastmod>2022-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/Data-Processing-Clusters/</loc>
-    <lastmod>2022-11-15</lastmod>
+    <loc>https://chxu2000.github.io/tags/Data-Processing-Clusters/</loc>
+    <lastmod>2022-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/openLooKeng/</loc>
-    <lastmod>2022-11-15</lastmod>
+    <loc>https://chxu2000.github.io/tags/openLooKeng/</loc>
+    <lastmod>2022-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/SSH/</loc>
-    <lastmod>2022-11-15</lastmod>
+    <loc>https://chxu2000.github.io/tags/PostgreSQL/</loc>
+    <lastmod>2022-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/PostgreSQL/</loc>
-    <lastmod>2022-11-15</lastmod>
+    <loc>https://chxu2000.github.io/tags/SSH/</loc>
+    <lastmod>2022-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/Financial-System-Risk/</loc>
-    <lastmod>2022-11-15</lastmod>
+    <loc>https://chxu2000.github.io/tags/Financial-System-Risk/</loc>
+    <lastmod>2022-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -259,15 +259,15 @@
 
   
   <url>
-    <loc>http://example.com/categories/Skills/</loc>
-    <lastmod>2022-11-15</lastmod>
+    <loc>https://chxu2000.github.io/categories/Skills/</loc>
+    <lastmod>2022-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/Lab/</loc>
-    <lastmod>2022-11-15</lastmod>
+    <loc>https://chxu2000.github.io/categories/Lab/</loc>
+    <lastmod>2022-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
