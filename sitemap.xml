@@ -173,14 +173,14 @@
 
   
   <url>
-    <loc>https://chxu2000.github.io/tags/Linux/</loc>
+    <loc>https://chxu2000.github.io/tags/Graph-Machine-Learning/</loc>
     <lastmod>2022-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://chxu2000.github.io/tags/Graph-Machine-Learning/</loc>
+    <loc>https://chxu2000.github.io/tags/Linux/</loc>
     <lastmod>2022-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -208,13 +208,6 @@
   </url>
   
   <url>
-    <loc>https://chxu2000.github.io/tags/Pytorch/</loc>
-    <lastmod>2022-11-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://chxu2000.github.io/tags/Scheduling-Algorithms/</loc>
     <lastmod>2022-11-16</lastmod>
     <changefreq>weekly</changefreq>
@@ -229,6 +222,13 @@
   </url>
   
   <url>
+    <loc>https://chxu2000.github.io/tags/Pytorch/</loc>
+    <lastmod>2022-11-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://chxu2000.github.io/tags/openLooKeng/</loc>
     <lastmod>2022-11-16</lastmod>
     <changefreq>weekly</changefreq>
@@ -236,14 +236,14 @@
   </url>
   
   <url>
-    <loc>https://chxu2000.github.io/tags/PostgreSQL/</loc>
+    <loc>https://chxu2000.github.io/tags/SSH/</loc>
     <lastmod>2022-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://chxu2000.github.io/tags/SSH/</loc>
+    <loc>https://chxu2000.github.io/tags/PostgreSQL/</loc>
     <lastmod>2022-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -259,14 +259,14 @@
 
   
   <url>
-    <loc>https://chxu2000.github.io/categories/Skills/</loc>
+    <loc>https://chxu2000.github.io/categories/Lab/</loc>
     <lastmod>2022-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://chxu2000.github.io/categories/Lab/</loc>
+    <loc>https://chxu2000.github.io/categories/Skills/</loc>
     <lastmod>2022-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
