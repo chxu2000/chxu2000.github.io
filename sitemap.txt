@@ -1,7 +1,7 @@
+https://chxu2000.github.io/2022/10/17/PostgreSQL-About/
 https://chxu2000.github.io/about/index.html
 https://chxu2000.github.io/2022/03/17/Learn-Git/
 https://chxu2000.github.io/2022/10/17/OpenLooKeng-About/
-https://chxu2000.github.io/2022/10/17/PostgreSQL-About/
 https://chxu2000.github.io/2022/10/16/Learning-Scheduling-Algorithms-for-Data-Processing-Clusters/
 https://chxu2000.github.io/2022/07/04/LSched-A-Workload-Aware-Learned-Query-Scheduler-for-Analytical-Database-Systems/
 https://chxu2000.github.io/2022/06/16/Compress-Commands/
@@ -19,14 +19,14 @@ https://chxu2000.github.io/2022/03/13/hello-world/
 https://chxu2000.github.io/
 https://chxu2000.github.io/tags/Linux/
 https://chxu2000.github.io/tags/Graph-Machine-Learning/
+https://chxu2000.github.io/tags/Graph-Neural-Networks/
 https://chxu2000.github.io/tags/Graph-DB/
+https://chxu2000.github.io/tags/Pytorch/
+https://chxu2000.github.io/tags/Git/
+https://chxu2000.github.io/tags/openLooKeng/
 https://chxu2000.github.io/tags/Scheduling-Algorithms/
 https://chxu2000.github.io/tags/Data-Processing-Clusters/
-https://chxu2000.github.io/tags/openLooKeng/
-https://chxu2000.github.io/tags/Graph-Neural-Networks/
-https://chxu2000.github.io/tags/Pytorch/
 https://chxu2000.github.io/tags/SSH/
-https://chxu2000.github.io/tags/Git/
 https://chxu2000.github.io/tags/PostgreSQL/
 https://chxu2000.github.io/tags/Financial-System-Risk/
 https://chxu2000.github.io/categories/Skills/
