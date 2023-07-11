@@ -189,13 +189,6 @@
   </url>
   
   <url>
-    <loc>https://chxu2000.github.io/tags/Docker/</loc>
-    <lastmod>2023-07-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://chxu2000.github.io/tags/Graph-Machine-Learning/</loc>
     <lastmod>2023-07-11</lastmod>
     <changefreq>weekly</changefreq>
@@ -204,6 +197,34 @@
   
   <url>
     <loc>https://chxu2000.github.io/tags/Graph-DB/</loc>
+    <lastmod>2023-07-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://chxu2000.github.io/tags/Graph-Neural-Networks/</loc>
+    <lastmod>2023-07-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://chxu2000.github.io/tags/Pytorch/</loc>
+    <lastmod>2023-07-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://chxu2000.github.io/tags/openLooKeng/</loc>
+    <lastmod>2023-07-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://chxu2000.github.io/tags/Git/</loc>
     <lastmod>2023-07-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -224,34 +245,6 @@
   </url>
   
   <url>
-    <loc>https://chxu2000.github.io/tags/Pytorch/</loc>
-    <lastmod>2023-07-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://chxu2000.github.io/tags/Graph-Neural-Networks/</loc>
-    <lastmod>2023-07-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://chxu2000.github.io/tags/Git/</loc>
-    <lastmod>2023-07-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://chxu2000.github.io/tags/openLooKeng/</loc>
-    <lastmod>2023-07-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://chxu2000.github.io/tags/PostgreSQL/</loc>
     <lastmod>2023-07-11</lastmod>
     <changefreq>weekly</changefreq>
@@ -259,7 +252,7 @@
   </url>
   
   <url>
-    <loc>https://chxu2000.github.io/tags/Financial-System-Risk/</loc>
+    <loc>https://chxu2000.github.io/tags/Docker/</loc>
     <lastmod>2023-07-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -267,6 +260,13 @@
   
   <url>
     <loc>https://chxu2000.github.io/tags/SSH/</loc>
+    <lastmod>2023-07-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://chxu2000.github.io/tags/Financial-System-Risk/</loc>
     <lastmod>2023-07-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
