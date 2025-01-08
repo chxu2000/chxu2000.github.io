@@ -20,11 +20,21 @@ redirect_from:
 I am currently a Ph.D. student at the Key Laboratory of High Confidence Software Technologies, School of Computer Science, Peking University, under the supervision of <a href='https://cs.pku.edu.cn/info/1091/1657.htm'>Prof. Jun Gao</a>. Prior to now, I obtained my B.Eng. degree from the College of Electronic and Information Engineering, Tongji University, under the supervision of <a href='http://cs1.tongji.edu.cn/~dawei/'>Prof. Dawei Cheng</a>. My research interest includes AI+DB and Graph Learning.
 
 # 🔥 News
+- *2025.1*: &nbsp;🎉🎉 One paper (2nd) was accepted by TBD.
 - *2024.11*: &nbsp;🎉🎉 Two papers (1st & 2nd) were accepted by ICDE \'25.
 
 # 📝 Publications 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICDE '25</div><img src='images/bqsched.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">TBD</div><img src='images/SCPGAN.png' alt="SCPGAN" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+Scalable Learning-based Community-Preserving Graph Generation
+
+Sheng Xiang, **Chenhao Xu**, Dawei Cheng, and Ying Zhang
+</div>
+</div>
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICDE '25</div><img src='images/BQSched.png' alt="BQSched" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 BQSched: A Non-intrusive Scheduler for Batch Concurrent Queries via Reinforcement Learning
@@ -33,7 +43,7 @@ BQSched: A Non-intrusive Scheduler for Batch Concurrent Queries via Reinforcemen
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICDE '25</div><img src='images/tgae.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICDE '25</div><img src='images/TGAE.png' alt="TGAE" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 Efficient Learning-based Graph Simulation for Temporal Graphs
