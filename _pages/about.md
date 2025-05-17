@@ -25,6 +25,8 @@ I am currently a Ph.D. student at the Key Laboratory of High Confidence Software
 
 # 📝 Publications 
 
+(<sup>&dagger;</sup> denotes Equal Contribution & * denotes Corresponding Authors)
+
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">TBD</div><img src='images/SCPGAN.png' alt="SCPGAN" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
